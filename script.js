@@ -9,14 +9,19 @@ form.onsubmit = async (event) => {
 
     if (userValue.includes("@")) {
         const response = await fetch(`https://auto-spreadsheets-api.vercel.app/login`, {
-            method: "POST",
-            body: {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
                 email: userValue,
                 password: passValue
-            }
-        })
+            })
+        });
+
 
         console.log(response);
+        console.log(response.body);
     } else {
         console.log("teste")
     }
