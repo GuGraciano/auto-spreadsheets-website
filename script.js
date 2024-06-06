@@ -8,18 +8,24 @@ form.onsubmit = async (event) => {
   const passValue = pass.value;
 
   if (userValue.includes("@")) {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+      userName: userValue,
+      password: passValue,
+    });
+
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
     const response = await fetch(
-      `https://auto-spreadsheets-api.vercel.app/api/login`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: userValue,
-          password: passValue,
-        }),
-      }
+      "https://auto-spreadsheets-api.vercel.app/api/login",
+      requestOptions
     );
 
     console.log(response);
