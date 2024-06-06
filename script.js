@@ -12,7 +12,7 @@ form.onsubmit = async (event) => {
     myHeaders.append("Content-Type", "application/json");
 
     const raw = JSON.stringify({
-      userName: userValue,
+      email: userValue,
       password: passValue,
     });
 
@@ -23,14 +23,24 @@ form.onsubmit = async (event) => {
       redirect: "follow",
     };
 
-    const response = await fetch(
-      "https://auto-spreadsheets-api.vercel.app/api/login",
-      requestOptions
-    );
+    try {
+      const response = await fetch(
+        "https://auto-spreadsheets-api.vercel.app/api/login",
+        requestOptions
+      );
 
-    console.log(response);
-    console.log(response.body);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await response.json();
+
+      console.log("Response:", response);
+      console.log("Response body:", data);
+    } catch (error) {
+      console.error("There was a problem with the fetch operation:", error);
+    }
   } else {
-    console.log("teste");
+    console.log("Invalid email format");
   }
 };
