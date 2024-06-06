@@ -67,7 +67,13 @@ function notify(type, message) {
     let notification = Math.random().toString(36).substr(2, 10);
     n.setAttribute("id", notification);
     n.classList.add("notification", type);
-    n.innerHTML = "<div><b>Message</b></div>" + message;
+    let typeText;
+    if (type == "success") {
+      typeText = "Success";
+    } else {
+      typeText = "Error";
+    }
+    n.innerHTML = "<div><b>" + typeText + "</b></div>" + message;
     area.appendChild(n);
 
     let color = document.createElement("div");
