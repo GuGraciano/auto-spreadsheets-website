@@ -4,116 +4,111 @@ const form = document.querySelector("form");
 
 form.onsubmit = async (event) => {
   event.preventDefault();
-  const userValue = user.value;
-  const passValue = pass.value;
-
-  let payload = {
-    password: passValue,
-  };
-
-  if (userValue.includes("@")) {
-    payload.email = userValue;
-  } else {
-    payload.userName = userValue;
-  }
-
-  const raw = JSON.stringify(payload);
-
-  console.log(raw);
-
-  const myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-
-  const requestOptions = {
-    method: "POST",
-    headers: myHeaders,
-    body: raw,
-    redirect: "follow",
-  };
+  const payload = createPayload(user.value, pass.value);
+  const requestOptions = createRequestOptions(payload);
 
   try {
     const response = await fetch(
       "https://auto-spreadsheets-api.vercel.app/api/login",
       requestOptions
     );
-
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-
-    const data = await response.json();
-
-    console.log("Response:", response);
-    console.log("Response body:", data);
-
-    if (data.status) {
-      const roles = data.userData.roles.join(", ");
-      notify(
-        "success",
-        `logged as ${data.userData.userName} with roles: ${roles}`
-      );
-    } else {
-      notify("danger", data.message);
-    }
+    handleResponse(response);
   } catch (error) {
     console.error("There was a problem with the fetch operation:", error);
   }
 };
 
+function createPayload(userValue, passValue) {
+  return userValue.includes("@")
+    ? { email: userValue, password: passValue }
+    : { userName: userValue, password: passValue };
+}
+
+function createRequestOptions(payload) {
+  return {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+    redirect: "follow",
+  };
+}
+
+async function handleResponse(response) {
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+
+  const data = await response.json();
+  console.log("Response:", response);
+  console.log("Response body:", data);
+
+  if (data.status) {
+    const roles = data.userData.roles.join(", ");
+    notify(
+      "success",
+      `Logged in as ${data.userData.userName} with roles: ${roles}`
+    );
+  } else {
+    notify("danger", data.message);
+  }
+}
+
 function notify(type, message) {
-  (() => {
-    var area = document.getElementById("notification-area");
-    let n = document.createElement("div");
-    let notification = Math.random().toString(36).substr(2, 10);
-    n.setAttribute("id", notification);
-    n.classList.add("notification", type);
-    let typeText;
-    if (type == "success") {
-      typeText = "Success";
-    } else {
-      typeText = "Error";
+  const area = document.getElementById("notification-area");
+  const notification = createNotificationElement(type, message);
+  area.appendChild(notification);
+
+  setTimeout(() => {
+    notification.remove();
+    if (area.children.length === 0) {
+      area.style.display = "none";
     }
-    n.innerHTML = "<div><b>" + typeText + "</b></div>" + message;
-    area.appendChild(n);
+  }, 5000);
 
-    let color = document.createElement("div");
-    let colorid = "color" + Math.random().toString(36).substr(2, 10);
-    color.setAttribute("id", colorid);
-    color.classList.add("notification-color", type);
-    document.getElementById(notification).appendChild(color);
+  area.style.display = "block";
+}
 
-    let icon = document.createElement("a");
-    let iconid = "icon" + Math.random().toString(36).substr(2, 10);
-    icon.setAttribute("id", iconid);
-    icon.classList.add("notification-icon", type);
-    document.getElementById(notification).appendChild(icon);
+function createNotificationElement(type, message) {
+  const notificationId = generateUniqueId();
+  const notification = document.createElement("div");
+  notification.setAttribute("id", notificationId);
+  notification.classList.add("notification", type);
 
-    let _icon = document.createElement("i");
-    let _iconid = "_icon" + Math.random().toString(36).substr(2, 10);
-    _icon.setAttribute("id", _iconid);
+  const typeText = type === "success" ? "Success" : "Error";
+  notification.innerHTML = `<div><b>${typeText}</b></div>${message}`;
 
-    if (type == "success") {
-      _icon.className = "fa fa-2x fa-check-circle";
-    } else {
-      _icon.className = "fa fa-2x fa-exclamation-circle";
-    }
-    document.getElementById(iconid).appendChild(_icon);
+  const color = createColorElement(type);
+  const icon = createIconElement(type);
 
-    area.style.display = "block";
-    setTimeout(() => {
-      var notifications = document
-        .getElementById("notification-area")
-        .getElementsByClassName("notification");
-      for (let i = 0; i < notifications.length; i++) {
-        if (notifications[i].getAttribute("id") == notification) {
-          notifications[i].remove();
-          break;
-        }
-      }
+  notification.appendChild(color);
+  notification.appendChild(icon);
 
-      if (notifications.length == 0) {
-        area.style.display = "none";
-      }
-    }, 5000);
-  })();
+  return notification;
+}
+
+function createColorElement(type) {
+  const colorId = generateUniqueId();
+  const color = document.createElement("div");
+  color.setAttribute("id", colorId);
+  color.classList.add("notification-color", type);
+  return color;
+}
+
+function createIconElement(type) {
+  const iconId = generateUniqueId();
+  const icon = document.createElement("a");
+  icon.setAttribute("id", iconId);
+  icon.classList.add("notification-icon", type);
+
+  const iconClass =
+    type === "success"
+      ? "fa fa-2x fa-check-circle"
+      : "fa fa-2x fa-exclamation-circle";
+  icon.innerHTML = `<i class="${iconClass}"></i>`;
+
+  return icon;
+}
+
+function generateUniqueId() {
+  return Math.random().toString(36).substr(2, 10);
 }
