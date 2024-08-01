@@ -41,6 +41,9 @@ async function handleResponse(response) {
   const data = await response.json();
   console.log("Response:", response);
   console.log("Response body:", data);
+  
+
+  window.location.href = 'http://127.0.0.1:5500/home.html'
 
   if (data.status) {
     const roles = data.userData.roles.join(", ");
@@ -57,6 +60,7 @@ function notify(type, message) {
   const area = document.getElementById("notification-area");
   const notification = createNotificationElement(type, message);
   area.appendChild(notification);
+
 
   setTimeout(() => {
     notification.remove();
