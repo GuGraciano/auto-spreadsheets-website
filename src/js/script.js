@@ -43,7 +43,7 @@ async function handleResponse(response) {
   console.log("Response body:", data);
   
 
-  window.location.href = 'http://127.0.0.1:5500/home.html'
+   window.location.href = 'https://auto-spreadsheets-website.vercel.app/home.html'
 
   if (data.status) {
     const roles = data.userData.roles.join(", ");
