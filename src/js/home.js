@@ -1,4 +1,5 @@
 let currentSlide = 0;
+const slideInterval = 3000; // Tempo em milissegundos (3 segundos)
 
 const slides = document.querySelectorAll('.carousel-item');
 const totalSlides = slides.length;
@@ -44,3 +45,16 @@ function goToSlide(index) {
 
 // Initial slide
 showSlide(currentSlide);
+
+// Auto-slide functionality
+let autoSlideInterval = setInterval(nextSlide, slideInterval);
+
+// Stop auto-slide on hover
+document.querySelector('.carousel').addEventListener('mouseenter', () => {
+    clearInterval(autoSlideInterval);
+});
+
+// Resume auto-slide when not hovering
+document.querySelector('.carousel').addEventListener('mouseleave', () => {
+    autoSlideInterval = setInterval(nextSlide, slideInterval);
+});
