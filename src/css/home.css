@@ -5,6 +5,11 @@ body {
     overflow-x:hidden;
 }
 
+.login a {
+    color: unset;
+    text-decoration: none;
+}
+
 .navbar {
     display: flex;
     align-items: center;

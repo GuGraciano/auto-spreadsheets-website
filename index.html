@@ -1,31 +1,74 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tela de Login</title>
-    <link rel="stylesheet" href="./src/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./src/css/style.css" />
-    <link rel="stylesheet" href="./src/css/bootstrap.css" />
-  </head>
-  <body>
-    <div class="login-container">
-      <img src="./src/img/SENAI_logo.png" alt="Logo" class="logo-login" />
-      <form id="loginForm">
-        <div class="input-group">
-          <label for="username">Usuário:</label>
-          <input type="text" id="username" name="username" required />
-          <span class="error-message" id="usernameError"></span>
-        </div>
-        <div class="input-group">
-          <label for="password">Senha:</label>
-          <input type="password" id="password" name="password" required />
-          <span class="error-message" id="passwordError"></span>
-        </div>
-        <button type="submit">Entrar</button>
-      </form>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="src/css/home.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div style="width: 100vw; background-color: #ff1010;">
+        <ul style="display: flex; flex-direction: row; list-style: none; gap: 32px; margin-left: auto;">
+            <li style="font-weight: bold; color: #ffffff;">FIESP</li>
+            <li style="font-weight: bold; color: #ffffff;">CIESP</li>
+            <li style="font-weight: bold; color: #ffffff;">SESI</li>
+            <li style="font-weight: bold; color: #ffffff;">SENAI</li>
+            <li style="font-weight: bold; color: #ffffff;">IRS</li>
+        </ul>
     </div>
-    <div id="notification-area"></div>
-    <script src="./src/js/script.js"></script>
-  </body>
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="src/img/SENAI_logo.png" alt="Logo">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#">Cursos</a></li>
+            <li><a href="#">Cargos</a></li>
+            <li><a href="#">Salas</a></li>
+        </ul>
+
+        <div class="login" style="display: flex; justify-content: center; align-items: center; margin-left: auto;">
+            <img style="width: 32px; height: 32px; border-radius: 100%; margin-right: 8px;"
+                src="src/img/blank-profile-picture-973460_960_720.webp" alt="">
+            <a href="login.html" class="login"><p>Login</p></a>
+        </div>
+    </nav>
+
+    <!-- Últimas Notícias -->
+    <div class="container">
+        <h2>ÚLTIMAS NOTÍCIAS</h2>
+        <div class="carousel">
+            <div class="carousel-images">
+                <div class="carousel-item active">
+                    <a href="https://www.sp.senai.br/noticia/banco-de-talentos-senai-sp-2" target="_blank">
+                        <img src="src/img/noticia1.avif" alt="Notícia 1">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.sp.senai.br/noticia/senai-sp-oferece-cursos-de-drone-para-atender-crescente-demanda-da-industria"
+                        target="_blank">
+                        <img src="src/img/noticia2.avif" alt="Notícia 2">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.sp.senai.br/noticia/senai-sp-abre-90-mil-vagas-para-capacitacao-gratuita-em--tecnologia-da-informacao-em-2024"
+                        target="_blank">
+                        <img src="src/img/noticia3.avif" alt="Notícia 3">
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+            <div class="carousel-indicators">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/home.js"></script>
+</body>
+
 </html>

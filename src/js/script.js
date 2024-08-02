@@ -43,9 +43,9 @@ async function handleResponse(response) {
   console.log("Response body:", data);
   
 
-   window.location.href = 'https://auto-spreadsheets-website.vercel.app/home.html'
-
+  
   if (data.status) {
+    window.location.href = 'https://auto-spreadsheets-website.vercel.app/home.html'
     const roles = data.userData.roles.join(", ");
     notify(
       "success",
