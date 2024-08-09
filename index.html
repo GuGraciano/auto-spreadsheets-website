@@ -4,67 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>SENAI</title>
     <link rel="stylesheet" href="src/css/home.css">
+    <link rel="stylesheet" href="src/css/scrollbar.css">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <div style="width: 100vw; background-color: #ff1010;">
-        <ul style="display: flex; flex-direction: row; list-style: none; gap: 32px; margin-left: auto;">
-            <li style="font-weight: bold; color: #ffffff;">FIESP</li>
-            <li style="font-weight: bold; color: #ffffff;">CIESP</li>
-            <li style="font-weight: bold; color: #ffffff;">SESI</li>
-            <li style="font-weight: bold; color: #ffffff;">SENAI</li>
-            <li style="font-weight: bold; color: #ffffff;">IRS</li>
+    <!-- Header Bar -->
+    <div class="header-bar">
+        <ul class="header-links">
+            <li>FIESP</li>
+            <li>CIESP</li>
+            <li>SESI</li>
+            <li>SENAI</li>
+            <li>IRS</li>
         </ul>
     </div>
+
+    <!-- Navbar -->
     <nav class="navbar">
         <a href="#" class="logo">
-            <img src="src/img/SENAI_logo.png" alt="Logo">
+            <img src="src/img/SENAI_logo.png" alt="Logo SENAI">
         </a>
 
         <ul class="nav-links">
             <li><a href="#">Cursos</a></li>
-            <li><a href="#">Cargos</a></li>
             <li><a href="#">Salas</a></li>
+            <li><a href="#">Professores</a></li>
         </ul>
 
-        <div class="login" style="display: flex; justify-content: center; align-items: center; margin-left: auto;">
-            <img style="width: 32px; height: 32px; border-radius: 100%; margin-right: 8px;"
-                src="src/img/blank-profile-picture-973460_960_720.webp" alt="">
-            <a href="login.html" class="login"><p>Login</p></a>
+        <div class="login">
+            <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Perfil" class="profile-img">
+            <a href="login.html">Login</a>
         </div>
     </nav>
 
     <!-- Últimas Notícias -->
     <div class="container">
         <h2>ÚLTIMAS NOTÍCIAS</h2>
-        <div class="carousel">
+        <div class="carousel" aria-label="Últimas Notícias">
             <div class="carousel-images">
                 <div class="carousel-item active">
                     <a href="https://www.sp.senai.br/noticia/banco-de-talentos-senai-sp-2" target="_blank">
-                        <img src="src/img/noticia1.avif" alt="Notícia 1">
+                        <img src="src/img/noticia1.avif" alt="Banco de Talentos SENAI-SP">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="https://www.sp.senai.br/noticia/senai-sp-oferece-cursos-de-drone-para-atender-crescente-demanda-da-industria"
-                        target="_blank">
-                        <img src="src/img/noticia2.avif" alt="Notícia 2">
+                    <a href="https://www.sp.senai.br/noticia/senai-sp-oferece-cursos-de-drone-para-atender-crescente-demanda-da-industria" target="_blank">
+                        <img src="src/img/noticia2.avif" alt="Cursos de drone SENAI-SP">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="https://www.sp.senai.br/noticia/senai-sp-abre-90-mil-vagas-para-capacitacao-gratuita-em--tecnologia-da-informacao-em-2024"
-                        target="_blank">
-                        <img src="src/img/noticia3.avif" alt="Notícia 3">
+                    <a href="https://www.sp.senai.br/noticia/senai-sp-abre-90-mil-vagas-para-capacitacao-gratuita-em--tecnologia-da-informacao-em-2024" target="_blank">
+                        <img src="src/img/noticia3.avif" alt="Capacitação gratuita em tecnologia SENAI-SP 2024">
                     </a>
                 </div>
             </div>
-            <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
-            <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
-            <div class="carousel-indicators">
-
-            </div>
+            <button class="carousel-control prev" aria-label="Slide anterior" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control next" aria-label="Próximo slide" onclick="nextSlide()">&#10095;</button>
+            <div class="carousel-indicators" aria-label="Indicadores de slide"></div>
         </div>
     </div>
 

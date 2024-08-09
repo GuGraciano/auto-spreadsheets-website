@@ -4,7 +4,7 @@ const slideInterval = 3000; // Tempo em milissegundos (3 segundos)
 const slides = document.querySelectorAll('.carousel-item');
 const totalSlides = slides.length;
 
-// Create indicators dynamically
+// Cria indicadores dinamicamente
 const indicatorsContainer = document.querySelector('.carousel-indicators');
 slides.forEach((_, i) => {
     const indicator = document.createElement('div');
@@ -22,7 +22,7 @@ function showSlide(index) {
     });
     document.querySelector('.carousel-images').style.transform = `translateX(-${index * 100}%)`;
 
-    // Update indicators
+    // Atualiza indicadores
     document.querySelectorAll('.carousel-indicator').forEach((indicator, i) => {
         indicator.classList.toggle('active', i === index);
     });
@@ -41,20 +41,22 @@ function prevSlide() {
 function goToSlide(index) {
     currentSlide = index;
     showSlide(currentSlide);
+    clearInterval(autoSlideInterval); // Pausa o auto-slide
+    autoSlideInterval = setInterval(nextSlide, slideInterval); // Reinicia o auto-slide
 }
 
-// Initial slide
+// Slide inicial
 showSlide(currentSlide);
 
 // Auto-slide functionality
 let autoSlideInterval = setInterval(nextSlide, slideInterval);
 
-// Stop auto-slide on hover
+// Para o auto-slide ao passar o mouse sobre o carrossel
 document.querySelector('.carousel').addEventListener('mouseenter', () => {
     clearInterval(autoSlideInterval);
 });
 
-// Resume auto-slide when not hovering
+// Retoma o auto-slide quando o mouse sai do carrossel
 document.querySelector('.carousel').addEventListener('mouseleave', () => {
     autoSlideInterval = setInterval(nextSlide, slideInterval);
 });

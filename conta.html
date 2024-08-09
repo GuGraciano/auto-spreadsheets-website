@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta</title>
+    <link rel="stylesheet" href="src/css/conta.css">
+    <link rel="stylesheet" href="src/css/scrollbar.css">
+    <link rel="stylesheet" href="src/css/home.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="header-bar">
+        <ul class="header-links">
+            <li>FIESP</li>
+            <li>CIESP</li>
+            <li>SESI</li>
+            <li>SENAI</li>
+            <li>IRS</li>
+        </ul>
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="src/img/SENAI_logo.png" alt="Logo">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#">Cursos</a></li>
+            <li><a href="#">Salas</a></li>
+            <li><a href="#">Professores</a></li>
+        </ul>
+
+        <div class="account-info">
+            <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
+            <a href="conta.html"><p>Minha Conta</p></a>
+        </div>
+    </nav>  
+
+    <div class="breadcrumb">
+        <a href="home.html"><b>Home</b></a> &gt; <span><b>Minha Conta</b></span>
+    </div>
+
+
+    <div class="account-container">
+        <h1>Minha Conta</h1>
+        <div class="profile">
+            <div class="profile-img-container">
+                <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Foto de Perfil" class="profile-img">
+                <button class="profile-upload" onclick="document.getElementById('file-input').click();">Trocar Foto</button>
+                <input type="file" id="file-input" class="file-input" accept="image/*" />
+            </div>
+            <div class="profile-info">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" placeholder="Seu Nome" class="profile-input" />
+
+                <label for="bio">Biografia:</label>
+                <textarea id="bio" rows="4" placeholder="Sua biografia aqui..." class="profile-textarea"></textarea>
+
+                <button class="save-btn">Salvar</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

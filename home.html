@@ -6,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="src/css/home.css">
+    <link rel="stylesheet" href="src/css/scrollbar.css">
 </head>
 
 <body>
     <!-- Navbar -->
-    <div style="width: 100vw; background-color: #ff1010;">
-        <ul style="display: flex; flex-direction: row; list-style: none; gap: 32px; margin-left: auto;">
-            <li style="font-weight: bold; color: #ffffff;">FIESP</li>
-            <li style="font-weight: bold; color: #ffffff;">CIESP</li>
-            <li style="font-weight: bold; color: #ffffff;">SESI</li>
-            <li style="font-weight: bold; color: #ffffff;">SENAI</li>
-            <li style="font-weight: bold; color: #ffffff;">IRS</li>
+    <div class="header-bar">
+        <ul class="header-links">
+            <li>FIESP</li>
+            <li>CIESP</li>
+            <li>SESI</li>
+            <li>SENAI</li>
+            <li>IRS</li>
         </ul>
     </div>
+
     <nav class="navbar">
         <a href="index.html" class="logo">
             <img src="src/img/SENAI_logo.png" alt="Logo">
@@ -26,45 +28,47 @@
 
         <ul class="nav-links">
             <li><a href="#">Cursos</a></li>
-            <li><a href="#">Cargos</a></li>
             <li><a href="#">Salas</a></li>
+            <li><a href="#">Professores</a></li>
         </ul>
 
-        <div style="display: flex; justify-content: center; align-items: center; margin-left: auto;">
-            <img style="width: 32px; height: 32px; border-radius: 100%; margin-right: 8px;"
-                src="src/img/blank-profile-picture-973460_960_720.webp" alt="">
-            <p>Minha Conta</p>
+        <div class="account-info">
+            <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
+            <a href="conta.html"><p>Minha Conta</p></a>
         </div>
     </nav>
 
     <!-- Últimas Notícias -->
     <div class="container">
-        <h2 style="color: black; margin-bottom: 4px !important;">Seja bem-vindo à sua conta.</h2>
-        <p style="text-align: center; margin-top: 4px !important; margin-bottom: 32px !important;">Por favor, selecione o que deseja visualizar.</p>
+        <h2>Seja bem-vindo à sua conta.</h2>
+        <p class="welcome-text">Por favor, selecione o que deseja visualizar.</p>
 
-        <ul style="display: grid; grid-template-columns: repeat(2, 1fr); list-style: none; gap: 32px; max-width: 100vw;">
-            <li style="display: flex; flex-direction: column; align-items: center; box-shadow: rgba(0, 0, 0, 0.1) 6px 6px 12px; border-radius: 12px;">
-                <img src="https://placehold.co/600x400/EEE/31343C" alt="" style="width: auto; height: 300px; object-fit: cover; border-radius: 16px; padding: 32px 0;">
-                <h3 style="margin-bottom: 8px !important;">Cursos</h3>
-                <p style="margin-top: 8px !important;">Visualizar e monitorar os cursos disponíveis em sua unidade.</p>
+        <ul class="selection-list">
+            <li class="selection-item">
+                <a href="cursos.html">
+                    <img src="https://placehold.co/600x400/EEE/31343C" alt="Cursos" class="selection-img">
+                    <h3>Cursos</h3>
+                    <p>Visualizar e monitorar os cursos disponíveis em sua unidade.</p>
+                </a>
             </li>
-            <li style="display: flex; flex-direction: column; align-items: center; box-shadow: rgba(0, 0, 0, 0.1) 6px 6px 12px; border-radius: 12px;">
-                <img src="https://placehold.co/600x400/EEE/31343C" alt="" style="width: auto; height: 300px; object-fit: cover; border-radius: 16px; padding: 32px 0;">
-                <h3 style="margin-bottom: 8px !important;">Salas</h3>
-                <p style="margin-top: 8px !important;">Visualizar e monitorar as salas de sua unidade.</p>
+            <li class="selection-item">
+                <a href="salas.html">
+                    <img src="https://placehold.co/600x400/EEE/31343C" alt="Salas" class="selection-img">
+                    <h3>Salas</h3>
+                    <p>Visualizar e monitorar as salas de sua unidade.</p>
+                </a>
             </li>
-            <li style="display: flex; flex-direction: column; align-items: center; box-shadow: rgba(0, 0, 0, 0.1) 6px 6px 12px; border-radius: 12px;">
-                <img src="https://placehold.co/600x400/EEE/31343C" alt="" style="width: auto; height: 300px; object-fit: cover; border-radius: 16px; padding: 32px 0;">
-                <h3 style="margin-bottom: 8px !important;">Alunos</h3>
-                <p style="margin-top: 8px !important;">Visualizar e monitorar os cargos de sua unidade.</p>
-            </li>
-            <li style="display: flex; flex-direction: column; align-items: center; box-shadow: rgba(0, 0, 0, 0.1) 6px 6px 12px; border-radius: 12px;">
-                <img src="https://placehold.co/600x400/EEE/31343C" alt="" style="width: auto; height: 300px; object-fit: cover; border-radius: 16px; padding: 32px 0;">
-                <h3 style="margin-bottom: 8px !important;">Professores</h3>
-                <p style="margin-top: 8px !important;">Visualizar e monitorar os cargos de sua unidade.</p>
+            <li class="selection-item">
+                <a href="professores.html">
+                    <img src="https://placehold.co/600x400/EEE/31343C" alt="Professores" class="selection-img">
+                    <h3>Professores</h3>
+                    <p>Visualizar e monitorar os cargos de sua unidade.</p>
+                </a>
             </li>
         </ul>
-    </div>
+        
+        
 
     <script src="src/js/home.js"></script>
 </body>
+</html>

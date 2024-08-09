@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Curso</title>
+    <link rel="stylesheet" href="src/css/home.css"> <!-- Inclua o CSS principal -->
+    <link rel="stylesheet" href="src/css/detalhe-cursos.css"> 
+    <link rel="stylesheet" href="src/css/scrollbar.css"> 
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-bar">
+            <ul class="header-links">
+                <li>FIESP</li>
+                <li>CIESP</li>
+                <li>SESI</li>
+                <li>SENAI</li>
+                <li>IRS</li>
+            </ul>
+        </div>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="src/img/SENAI_logo.png" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Salas</a></li>
+                <li><a href="#">Professores</a></li>
+            </ul>
+            <div class="account-info">
+                <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
+                <a href="conta.html"><p>Minha Conta</p></a>
+            </div>
+        </nav>
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html"><b>Home</b></a> &gt; <a href="cursos.html"><b>Cursos</b></a> &gt; <span><b>Detalhes do Curso</b></span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="course-detail">
+        <div class="course-details">
+            <h1>Nome do Curso</h1>
+            <div class="course-meta">
+                <span><strong>Modalidade:</strong> Presencial</span>
+                <span><strong>Nível:</strong> Avançado</span>
+                <span><strong>Área:</strong> Tecnologia</span>
+            </div>
+            <p class="course-summary">
+                Resumo do curso detalhando os principais objetivos, metodologias e benefícios do curso.
+            </p>
+            <div class="course-extra-info">
+                <div class="info-item">
+                    <h3>Carga Horária</h3>
+                    <p>80 horas</p>
+                </div>
+                <div class="info-item">
+                    <h3>Programação</h3>
+                    <p>Detalhes sobre a programação semanal do curso.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Requisitos</h3>
+                    <p>Requisitos necessários para participar do curso.</p>
+                </div>
+            </div>
+            <a href="editar-curso.html" class="edit-button">Editar Curso</a>
+        </div>
+    </main>
+
+    <script src="src/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Curso</title>
+    <link rel="stylesheet" href="src/css/home.css"> <!-- Certifique-se de incluir o CSS principal -->
+    <link rel="stylesheet" href="src/css/scrollbar.css">
+    <link rel="stylesheet" href="src/css/cadastro-cursos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-bar">
+            <ul class="header-links">
+                <li>FIESP</li>
+                <li>CIESP</li>
+                <li>SESI</li>
+                <li>SENAI</li>
+                <li>IRS</li>
+            </ul>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="src/img/SENAI_logo.png" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Salas</a></li>
+                <li><a href="#">Professores</a></li>
+            </ul>
+            <div class="account-info">
+                <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
+                <a href="conta.html"><p>Minha Conta</p></a>
+            </div>
+        </nav>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html"><b>Home</b></a> &gt; <a href="cursos.html"><b>Cursos</b></a> &gt; <span><b>Cadastro de Curso</b></span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Formulário de Cadastro -->
+        <div class="form-section">
+            <div class="form-card">
+                <h2>Cadastro de Curso</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="course-name">Nome do Curso</label>
+                        <input type="text" id="course-name" name="course-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="modality">Modalidade</label>
+                        <select id="modality" name="modality">
+                            <option value="presencial">Presencial</option>
+                            <option value="online">Online</option>
+                            <option value="hibrido">Híbrido</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="level">Nível</label>
+                        <select id="level" name="level">
+                            <option value="fundamental">Fundamental</option>
+                            <option value="intermediario">Intermediário</option>
+                            <option value="avancado">Avançado</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="area">Área</label>
+                        <select id="area" name="area">
+                            <option value="tecnologia">Tecnologia</option>
+                            <option value="gestao">Gestão</option>
+                            <option value="design">Design</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="summary">Resumo</label>
+                        <textarea id="summary" name="summary" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Carga Horária</label>
+                        <input type="text" id="duration" name="duration" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="program">Programação do Curso</label>
+                        <textarea id="program" name="program" rows="6" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="requirements">Requisitos</label>
+                        <textarea id="requirements" name="requirements" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn">Cadastrar Curso</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="src/js/home.js"></script>
+</body>
+</html>

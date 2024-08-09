@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salas</title>
+    <link rel="stylesheet" href="src/css/salas.css">
+    <link rel="stylesheet" href="src/css/scrollbar.css">
+    <link rel="stylesheet" href="src/css/home.css">
+</head>
+
+<body>
+    <!-- Header Bar -->
+    <div class="header-bar">
+        <ul class="header-links">
+            <li>FIESP</li>
+            <li>CIESP</li>
+            <li>SESI</li>
+            <li>SENAI</li>
+            <li>IRS</li>
+        </ul>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="src/img/SENAI_logo.png" alt="Logo">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#">Cursos</a></li>
+            <li><a href="#">Salas</a></li>
+            <li><a href="#">Professores</a></li>
+        </ul>
+
+        <div class="account-info">
+            <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
+            <a href="conta.html"><p>Minha Conta</p></a>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <a href="home.html"><b>Home</b></a> &gt; <span><b>Salas</b></span>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="search-box">
+                <input type="text" placeholder="Buscar salas...">
+            </div>
+
+            <div class="filter-box">
+                <label for="curso">Curso</label>
+                <select id="curso">
+                    <option value="todos">Todos os Cursos</option>
+                    <option value="curso1">Curso 1</option>
+                    <option value="curso2">Curso 2</option>
+                    <option value="curso3">Curso 3</option>
+                </select>
+            </div>
+
+            <div class="filter-box">
+                <label for="disponibilidade">Disponibilidade</label>
+                <select id="disponibilidade">
+                    <option value="todos">Todos</option>
+                    <option value="disponivel">Disponível</option>
+                    <option value="ocupado">Ocupado</option>
+                </select>
+            </div>
+
+            <div class="filter-box">
+                <label for="maquinario">Maquinário</label>
+                <select id="maquinario">
+                    <option value="todos">Todos os Maquinários</option>
+                    <option value="maquinario1">Maquinário 1</option>
+                    <option value="maquinario2">Maquinário 2</option>
+                    <option value="maquinario3">Maquinário 3</option>
+                </select>
+            </div>
+
+            <div class="button-box">
+                <button class="add-room-btn"><a href="cadastro-salas.html">Cadastrar Sala</a></button>
+            </div>
+        </aside>
+
+        <!-- Cards de Salas -->
+        <main class="rooms-section">
+            <h2>Salas Disponíveis</h2>
+            <div class="room-cards">
+                <a href="detalhe-salas.html" class="room-card">
+                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Sala 1">
+                    <h3>Sala 1</h3>
+                    <p>Descrição da sala 1.</p>
+                </a>
+                <a href="detalhe-salas.html" class="room-card">
+                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Sala 2">
+                    <h3>Sala 2</h3>
+                    <p>Descrição da sala 2.</p>
+                </a>
+                <a href="detalhe-salas.html" class="room-card">
+                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Sala 3">
+                    <h3>Sala 3</h3>
+                    <p>Descrição da sala 3.</p>
+                </a>
+                <a href="detalhe-salas.html" class="room-card">
+                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Sala 4">
+                    <h3>Sala 4</h3>
+                    <p>Descrição da sala 4.</p>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <script src="src/js/salas.js"></script>
+</body>
+
+</html>

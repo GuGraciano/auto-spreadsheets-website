@@ -1,0 +1,20 @@
+/* custom scrollbar */
+/* Estilização da scrollbar */
+::-webkit-scrollbar {
+    width: 15px; /* Reduz a largura da scrollbar para um tamanho mais elegante */
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent; /* Fundo do trilho da scrollbar */
+    border-radius: 10px; /* Borda arredondada para o trilho */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff1010; /* Cor do polegar (barra de rolagem) */
+    border-radius: 10px; /* Borda arredondada para o polegar */
+    border: 4px solid #fff; /* Borda branca ao redor do polegar para um efeito de destaque */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a10505; /* Cor do polegar quando está em hover */
+}

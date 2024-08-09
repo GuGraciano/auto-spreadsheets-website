@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <link rel="stylesheet" href="src/css/cursos.css">
+    <link rel="stylesheet" href="src/css/scrollbar.css">
+    <link rel="stylesheet" href="src/css/home.css">
+</head>
+
+<body>
+    <!-- Header Bar -->
+    <div class="header-bar">
+        <ul class="header-links">
+            <li>FIESP</li>
+            <li>CIESP</li>
+            <li>SESI</li>
+            <li>SENAI</li>
+            <li>IRS</li>
+        </ul>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="src/img/SENAI_logo.png" alt="Logo">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#">Cursos</a></li>
+            <li><a href="#">Salas</a></li>
+            <li><a href="#">Professores</a></li>
+        </ul>
+
+        <div class="account-info">
+            <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
+            <a href="conta.html"><p>Minha Conta</p></a>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <a href="home.html"><b>Home</b></a> &gt; <span><b>Cursos</b></span>
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="search-box">
+                <input type="text" placeholder="Buscar cursos...">
+            </div>
+
+            <div class="filter-box">
+                <label for="area">Área</label>
+                <select id="area">
+                    <option value="todas">Todas as Áreas</option>
+                    <option value="tecnologia">Tecnologia</option>
+                    <option value="gestao">Gestão</option>
+                    <option value="saude">Saúde</option>
+                </select>
+            </div>
+
+            <div class="filter-box">
+                <label for="nivel">Nível</label>
+                <select id="nivel">
+                    <option value="todos">Todos os Níveis</option>
+                    <option value="basico">Básico</option>
+                    <option value="intermediario">Intermediário</option>
+                    <option value="avancado">Avançado</option>
+                </select>
+            </div>
+
+            <div class="filter-box">
+                <label for="modalidade">Modalidade</label>
+                <select id="modalidade">
+                    <option value="todas">Todas as Modalidades</option>
+                    <option value="presencial">Presencial</option>
+                    <option value="online">Online</option>
+                </select>
+            </div>
+
+            <div class="filter-box">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="gratuito">
+                    Gratuito
+                </label>
+            </div>
+
+            <div class="button-box">
+                <button class="add-course-btn"><a href="cadastro-cursos.html">Cadastrar Curso</a></button>
+            </div>
+        </aside>
+
+        <!-- Cards de Cursos -->
+        <main class="courses-section">
+            <h2>Cursos Disponíveis</h2>
+            <div class="course-cards">
+                <a href="detalhe-cursos.html" class="course-card">
+                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Curso 1">
+                    <h3>Curso 1</h3>
+                    <p>Descrição do curso 1.</p>
+                </a>
+                <a href="detalhe-cursos.html" class="course-card">
+                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Curso 2">
+                    <h3>Curso 2</h3>
+                    <p>Descrição do curso 2.</p>
+                </a>
+                <a href="detalhe-cursos.html" class="course-card">
+                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Curso 3">
+                    <h3>Curso 3</h3>
+                    <p>Descrição do curso 3.</p>
+                </a>
+                <a href="detalhe-cursos.html" class="course-card">
+                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Curso 4">
+                    <h3>Curso 4</h3>
+                    <p>Descrição do curso 4.</p>
+                </a>
+            </div>
+        </main>
+        
+
+    <script src="src/js/cursos.js"></script>
+</body>
+
+</html>

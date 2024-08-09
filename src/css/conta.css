@@ -1,0 +1,154 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Container principal */
+.account-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.account-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Seção do perfil */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 100px; /* Tamanho pequeno da imagem de perfil */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ddd; /* Borda leve para destacar a imagem */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Transição suave para aumentar a imagem e mudar a borda */
+}
+
+.profile-img-container:hover .profile-img {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+    border-color: #ff1010; /* Muda a cor da borda quando o mouse está sobre a área */
+}
+
+.profile-upload {
+    margin-top: 10px;
+    background: #ff1010;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px 12px;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra leve para destacar o botão */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para cor e tamanho */
+}
+
+.profile-upload:hover {
+    background-color: #e00e0e; /* Escurece a cor de fundo ao passar o mouse */
+    transform: scale(1.001); /* Aumenta levemente o tamanho do botão ao passar o mouse */
+}
+
+.file-input {
+    display: none; /* Oculta o input de arquivo padrão */
+}
+
+/* Informações do perfil */
+.profile-info {
+    width: 100%;
+}
+
+.profile-info label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.profile-info .profile-input,
+.profile-info .profile-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none; /* Remove borda dos campos */
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+}
+
+.profile-info .profile-textarea {
+    resize: vertical;
+    min-height: 100px; /* Define altura mínima para a área de texto */
+}
+
+/* Botão de salvar */
+.save-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff1010;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.save-btn:hover {
+    background-color: #e00e0e;
+}
+
+.profile-img-container img {
+    width: 190px;
+    height: 190px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    margin: 20px 0; /* Ajuste a margem superior e inferior */
+    padding-left: 20px; /* Adiciona um preenchimento à esquerda para deslocar o breadcrumb */
+    font-size: 14px;
+    color: #666;
+    max-width: 800px;
+}
+
+.breadcrumb a {
+    color: #ff1010;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: #333;
+}
