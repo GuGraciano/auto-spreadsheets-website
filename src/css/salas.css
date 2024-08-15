@@ -92,6 +92,7 @@ body {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
+    gap: 20px;
 }
 
 /* Sidebar */
@@ -101,9 +102,11 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    position: sticky;
+    top: 20px;
+    left: 0;
+    height: calc(100vh - 40px); /* Ajusta a altura para ocupar a altura total menos o padding superior e inferior */
+    overflow-y: auto;
 }
 
 .sidebar .search-box input {
@@ -148,8 +151,16 @@ body {
     font-weight: bold;
 }
 
+/* Main Section */
+.rooms-section {
+    flex: 1;
+    padding: 0;
+}
+
+/* Botão de adicionar sala */
 .button-box {
     text-align: center;
+    margin-bottom: 20px; /* Espaçamento abaixo do botão */
 }
 
 .add-room-btn {
@@ -168,25 +179,14 @@ body {
     background-color: #e00d0d;
 }
 
-/* Seção de Salas */
-.rooms-section {
-    flex: 1;
-    padding: 0 20px;
-}
-
-.rooms-section h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #ff1010;
-    text-align: center;
-}
-
+/* Grid de salas */
 .room-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 }
 
+/* Cartão de sala */
 .room-card {
     background-color: #ffffff;
     border-radius: 8px;
@@ -221,27 +221,6 @@ body {
     color: #666;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .sidebar {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .rooms-section {
-        padding: 0;
-    }
-
-    .room-cards {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* Breadcrumb */
 .breadcrumb {
     padding: 10px 24px;
@@ -266,4 +245,27 @@ body {
 .room-cards a {
     text-decoration: none;
     color: inherit;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+        position: static; /* Remove a fixação em telas menores */
+        height: auto; /* Remove a altura fixa */
+    }
+
+    .rooms-section {
+        padding: 0;
+    }
+
+    .room-cards {
+        grid-template-columns: 1fr;
+    }
 }

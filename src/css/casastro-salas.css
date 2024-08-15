@@ -1,0 +1,209 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f6f8;
+}
+
+/* Header Bar */
+.header-bar {
+    background-color: #ff1010;
+}
+
+.header-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 32px;
+    padding: 0 10px;
+    justify-content: end;
+}
+
+.header-links li {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #ff1010;
+    background-color: #fff;
+}
+
+.navbar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links a {
+    color: #333;
+    padding: 10px 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #ff1010;
+}
+
+.account-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+.profile-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Container principal */
+.container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Card de Cadastro da Sala */
+.room-form-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 6px 12px;
+    padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.room-form-card:hover {
+    transform: translateY(-6px);
+    box-shadow: rgba(0, 0, 0, 0.15) 0 8px 16px;
+}
+
+.room-form-card h2 {
+    font-size: 32px;
+    color: #ff1010;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estilos dos campos de formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 18px;
+    color: #555;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #ff1010;
+    outline: none;
+}
+
+.form-group select {
+    background-color: #fff;
+}
+
+/* Botões */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.save-btn,
+.cancel-btn {
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.save-btn {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.save-btn:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.cancel-btn:hover {
+    background-color: #e53935;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #ff1010;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #e00d0d;
+}
+
+.breadcrumb span {
+    color: #333;
+}

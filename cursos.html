@@ -29,9 +29,9 @@
         </a>
 
         <ul class="nav-links">
-            <li><a href="#">Cursos</a></li>
-            <li><a href="#">Salas</a></li>
-            <li><a href="#">Professores</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="salas.html">Salas</a></li>
+            <li><a href="professores.html">Professores</a></li>
         </ul>
 
         <div class="account-info">
@@ -44,13 +44,12 @@
         <a href="home.html"><b>Home</b></a> &gt; <span><b>Cursos</b></span>
     </div>
 
-
     <!-- Main Content -->
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="search-box">
-                <input type="text" placeholder="Buscar cursos...">
+                <input type="text" class="search-input" placeholder="Buscar cursos...">
             </div>
 
             <div class="filter-box">
@@ -84,43 +83,53 @@
 
             <div class="filter-box">
                 <label class="checkbox-label">
-                    <input type="checkbox" id="gratuito">
                     Gratuito
+                    <input type="radio" id="gratuito">
+                    Pago
+                    <input type="radio" id="gratuito">
                 </label>
-            </div>
-
-            <div class="button-box">
-                <button class="add-course-btn"><a href="cadastro-cursos.html">Cadastrar Curso</a></button>
             </div>
         </aside>
 
-        <!-- Cards de Cursos -->
-        <main class="courses-section">
-            <h2>Cursos Disponíveis</h2>
-            <div class="course-cards">
-                <a href="detalhe-cursos.html" class="course-card">
-                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Curso 1">
-                    <h3>Curso 1</h3>
-                    <p>Descrição do curso 1.</p>
-                </a>
-                <a href="detalhe-cursos.html" class="course-card">
-                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Curso 2">
-                    <h3>Curso 2</h3>
-                    <p>Descrição do curso 2.</p>
-                </a>
-                <a href="detalhe-cursos.html" class="course-card">
-                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Curso 3">
-                    <h3>Curso 3</h3>
-                    <p>Descrição do curso 3.</p>
-                </a>
-                <a href="detalhe-cursos.html" class="course-card">
-                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Curso 4">
-                    <h3>Curso 4</h3>
-                    <p>Descrição do curso 4.</p>
-                </a>
+        <!-- Main Section -->
+        <main class="courses-main">
+            <!-- Button to Register Course -->
+            <div class="button-box">
+                <button class="add-course-btn"><a href="cadastro-cursos.html">Cadastrar Curso</a></button>
             </div>
+
+            <!-- Cards de Cursos -->
+            <section class="courses-section">
+                <h2>Cursos Disponíveis</h2>
+                <div class="course-cards">
+                    <a href="detalhe-cursos.html" class="course-card">
+                        <img src="https://placehold.co/300x200/EEE/31343C" alt="Curso 1">
+                        <h3 class="course-title">Curso 1</h3>
+                        <p class="course-description">Descrição do curso 1.</p>
+                        <div class="tecnologia basico presencial"></div>
+                    </a>
+                    <a href="detalhe-cursos.html" class="course-card">
+                        <img src="https://placehold.co/300x200/EEE/31343C" alt="Curso 2">
+                        <h3 class="course-title">Curso 2</h3>
+                        <p class="course-description">Descrição do curso 2.</p>
+                        <div class="gestao intermediario online"></div>
+                    </a>
+                    <a href="detalhe-cursos.html" class="course-card">
+                        <img src="https://placehold.co/300x200/EEE/31343C" alt="Curso 3">
+                        <h3 class="course-title">Curso 3</h3>
+                        <p class="course-description">Descrição do curso 3.</p>
+                        <div class="saude avancado presencial"></div>
+                    </a>
+                    <a href="detalhe-cursos.html" class="course-card">
+                        <img src="https://placehold.co/300x200/EEE/31343C" alt="Curso 4">
+                        <h3 class="course-title">Curso 4</h3>
+                        <p class="course-description">Descrição do curso 4.</p>
+                        <div class="saude basico presencial"></div>
+                    </a>
+                </div>
+            </section>
         </main>
-        
+    </div>
 
     <script src="src/js/cursos.js"></script>
 </body>

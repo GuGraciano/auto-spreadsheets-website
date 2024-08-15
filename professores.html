@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professores</title>
+    <link rel="stylesheet" href="src/css/professores.css">
+    <link rel="stylesheet" href="src/css/scrollbar.css">
+    <link rel="stylesheet" href="src/css/home.css">
+</head>
+
+<body>
+    <!-- Header Bar -->
+    <div class="header-bar">
+        <ul class="header-links">
+            <li>FIESP</li>
+            <li>CIESP</li>
+            <li>SESI</li>
+            <li>SENAI</li>
+            <li>IRS</li>
+        </ul>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="src/img/SENAI_logo.png" alt="Logo">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="salas.html">Salas</a></li>
+            <li><a href="professores.html">Professores</a></li>
+        </ul>
+
+        <div class="account-info">
+            <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
+            <a href="conta.html"><p>Minha Conta</p></a>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <a href="home.html"><b>Home</b></a> &gt; <span><b>Professores</b></span>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Buscar professores...">
+            </div>
+
+            <div class="filter-box">
+                <label for="area">Área</label>
+                <select id="area">
+                    <option value="todas">Todas as Áreas</option>
+                    <option value="tecnologia">Tecnologia</option>
+                    <option value="gestao">Gestão</option>
+                    <option value="saude">Saúde</option>
+                </select>
+            </div>
+
+            <div class="filter-box">
+                <label for="curso">Curso</label>
+                <select id="curso">
+                    <option value="todos">Todos os Cursos</option>
+                    <option value="curso1">Curso 1</option>
+                    <option value="curso2">Curso 2</option>
+                    <option value="curso3">Curso 3</option>
+                </select>
+            </div>
+
+            <div class="button-box">
+                <button class="add-professor-btn"><a href="cadastro-professores.html">Cadastrar Professor</a></button>
+            </div>
+        </aside>
+
+        <!-- Cards de Professores -->
+        <main class="professores-section">
+            <h2>Professores Disponíveis</h2>
+            <div class="professor-cards">
+                <a href="detalhe-professores.html" class="professor-card">
+                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Professor 1">
+                    <h3 class="professor-title">Professor 1</h3>
+                    <p class="professor-description">Descrição do Professor 1.</p>
+                    <div class="tecnologia curso1"></div>
+                </a>
+                <a href="detalhe-professores.html" class="professor-card">
+                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Professor 2">
+                    <h3 class="professor-title">Professor 2</h3>
+                    <p class="professor-description">Descrição do Professor 2.</p>
+                    <div class="saude curso3"></div>
+                </a>
+                <a href="detalhe-professores.html" class="professor-card">
+                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Professor 3">
+                    <h3 class="professor-title">Professor 3</h3>
+                    <p class="professor-description">Descrição do Professor 3.</p>
+                    <div class="tecnologia curso1"></div>
+                </a>
+                <a href="detalhe-professores.html" class="professor-card">
+                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Professor 4">
+                    <h3 class="professor-title">Professor 4</h3>
+                    <p class="professor-description">Descrição do Professor 4.</p>
+                    <div class="gestao curso2"></div>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <script src="src/js/professores.js"></script>
+</body>
+
+</html>

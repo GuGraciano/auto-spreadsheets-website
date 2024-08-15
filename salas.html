@@ -29,9 +29,9 @@
         </a>
 
         <ul class="nav-links">
-            <li><a href="#">Cursos</a></li>
-            <li><a href="#">Salas</a></li>
-            <li><a href="#">Professores</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="salas.html">Salas</a></li>
+            <li><a href="professores.html">Professores</a></li>
         </ul>
 
         <div class="account-info">
@@ -49,7 +49,7 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="search-box">
-                <input type="text" placeholder="Buscar salas...">
+                <input type="text" class="search-input" placeholder="Buscar salas...">
             </div>
 
             <div class="filter-box">
@@ -81,6 +81,7 @@
                 </select>
             </div>
 
+            <!-- Botão Adicionar Sala -->
             <div class="button-box">
                 <button class="add-room-btn"><a href="cadastro-salas.html">Cadastrar Sala</a></button>
             </div>
@@ -92,23 +93,21 @@
             <div class="room-cards">
                 <a href="detalhe-salas.html" class="room-card">
                     <img src="https://placehold.co/300x200/EEE/31343C" alt="Sala 1">
-                    <h3>Sala 1</h3>
-                    <p>Descrição da sala 1.</p>
+                    <h3 class="room-title">Sala 1</h3>
+                    <p class="room-description">Descrição da sala 1.</p>
+                    <div class="curso1 disponivel maquinario1"></div>
                 </a>
                 <a href="detalhe-salas.html" class="room-card">
                     <img src="https://placehold.co/300x200/EEE/31343C" alt="Sala 2">
-                    <h3>Sala 2</h3>
-                    <p>Descrição da sala 2.</p>
+                    <h3 class="room-title">Sala 2</h3>
+                    <p class="room-description">Descrição da sala 2.</p>
+                    <div class="curso2 ocupado maquinario2"></div>
                 </a>
                 <a href="detalhe-salas.html" class="room-card">
                     <img src="https://placehold.co/300x200/EEE/31343C" alt="Sala 3">
-                    <h3>Sala 3</h3>
-                    <p>Descrição da sala 3.</p>
-                </a>
-                <a href="detalhe-salas.html" class="room-card">
-                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Sala 4">
-                    <h3>Sala 4</h3>
-                    <p>Descrição da sala 4.</p>
+                    <h3 class="room-title">Sala 3</h3>
+                    <p class="room-description">Descrição da sala 3.</p>
+                    <div class="curso1 disponivel maquinario3"></div>
                 </a>
             </div>
         </main>

@@ -1,3 +1,4 @@
+/* Reset básico */
 *,
 *::before,
 *::after {
@@ -7,11 +8,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
-    overflow-x: hidden;
+    background-color: #f4f6f8;
 }
 
 /* Header Bar */
@@ -38,9 +38,10 @@ body {
     display: flex;
     align-items: center;
     padding: 12px 24px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid #ff1010;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #ff1010;
     background-color: #fff;
+    text-decoration: none;
 }
 
 .navbar .logo {
@@ -56,15 +57,17 @@ body {
 .navbar .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 24px;
     margin: 0;
     padding: 0;
 }
 
 .navbar .nav-links a {
     color: #333;
-    padding: 8px 12px;
+    padding: 10px 14px;
+    font-weight: 500;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 .navbar .nav-links a:hover {
@@ -84,7 +87,6 @@ body {
     border-radius: 50%;
     margin-right: 8px;
 }
-
 
 /* Breadcrumb */
 .breadcrumb {
