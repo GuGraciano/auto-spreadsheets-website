@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <script src="./src/js/notify.js"></script>
     <link rel="stylesheet" href="src/css/home.css">
     <link rel="stylesheet" href="src/css/scrollbar.css">
+    <link rel="stylesheet" href="src/css/notify.css">
 </head>
 
 <body>
@@ -35,7 +37,9 @@
 
         <div class="account-info">
             <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
-            <a href="conta.html"><p>Minha Conta</p></a>
+            <a href="conta.html">
+                <p>Minha Conta</p>
+            </a>
         </div>
     </nav>
 
@@ -67,9 +71,9 @@
                 </a>
             </li>
         </ul>
-        
-        
 
-    <script src="src/js/home.js"></script>
+        <div id="notification-area"></div>
+        <script src="src/js/home.js"></script>
 </body>
+
 </html>

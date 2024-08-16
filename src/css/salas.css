@@ -95,6 +95,7 @@ body {
     gap: 20px;
 }
 
+
 /* Sidebar */
 .sidebar {
     width: 280px;
@@ -128,6 +129,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-top: 30px;
 }
 
 .filter-box label {
@@ -144,17 +146,11 @@ body {
     border-radius: 4px;
 }
 
-.checkbox-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: bold;
-}
 
 /* Main Section */
 .rooms-section {
     flex: 1;
-    padding: 0;
+    padding: 0 20px;
 }
 
 /* Botão de adicionar sala */
@@ -172,7 +168,6 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%;
 }
 
 .add-room-btn:hover {
