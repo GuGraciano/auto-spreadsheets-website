@@ -9,7 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f6f8; /* Fundo suave */
+    background-color: #f4f6f8;
 }
 
 /* Container principal */
@@ -19,8 +19,8 @@ body {
     padding: 20px;
 }
 
-/* Card de Detalhes da Sala */
-.room-details-card {
+/* Card de Cadastro da Turma */
+.turma-form-card {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
@@ -28,63 +28,52 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.room-details-card:hover {
+.turma-form-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra mais intensa ao passar o mouse */
 }
 
-.room-details-card h2 {
+.turma-form-card h2 {
     font-size: 28px;
-    color: #ff6f61; /* Vermelho suave */
+    color: #ff6f61;
     text-align: center;
     margin-bottom: 30px;
 }
 
-.room-info {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 40px;
+/* Estilos dos campos de formulário */
+.form-group {
+    margin-bottom: 20px;
 }
 
-.room-info p {
-    margin-bottom: 14px;
+.form-group label {
+    font-size: 16px;
+    color: #666;
+    display: block;
+    margin-bottom: 8px;
 }
 
-.room-info ul {
-    list-style-type: disc;
-    margin-left: 20px;
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
 }
 
 /* Botões */
 .buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.manage-equipment-btn {
-    background-color: #ff1010;
-    color: #fff;
-    padding: 14px 28px;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.manage-equipment-btn:hover {
-    background-color: #e00d0d;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.save-cancel {
-    display: flex;
     justify-content: space-between;
-    width: 100%;
+    margin-top: 20px;
 }
 
 .save-btn,
@@ -120,11 +109,11 @@ body {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .room-details-card {
+    .turma-form-card {
         padding: 20px;
     }
 
-    .save-cancel {
+    .buttons {
         flex-direction: column;
         gap: 10px;
     }

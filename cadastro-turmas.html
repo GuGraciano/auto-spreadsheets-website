@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Turma</title>
+    <link rel="stylesheet" href="src/css/cadastro-turmas.css">
+    <link rel="stylesheet" href="src/css/scrollbar.css">
+    <link rel="stylesheet" href="src/css/home.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/breadcrumb.css">
+</head>
+
+<body>
+    <!-- Header Bar -->
+    <div class="header-bar">
+        <ul class="header-links">
+            <li>FIESP</li>
+            <li>CIESP</li>
+            <li>SESI</li>
+            <li>SENAI</li>
+            <li>IRS</li>
+        </ul>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="src/img/SENAI_logo.png" alt="Logo">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="salas.html">Salas</a></li>
+            <li><a href="professores.html">Professores</a></li>
+            <li><a href="turmas.html">Turmas</a></li>
+        </ul>
+
+        <div class="account-info">
+            <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
+            <a href="conta.html"><p>Minha Conta</p></a>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <a href="home.html"><b>Home</b></a> &gt; <a href="turmas.html"><b>Turmas</b></a> &gt; <span><b>Cadastrar Turma</b></span>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="turma-form-card">
+            <h2>Cadastrar Nova Turma</h2>
+
+            <form id="turma-form">
+                <!-- Nome da Turma -->
+                <div class="form-group">
+                    <label for="turma-name">Nome da Turma:</label>
+                    <input type="text" id="turma-name" placeholder="Ex: Turma 01" required>
+                </div>
+
+                <!-- Curso -->
+                <div class="form-group">
+                    <label for="turma-curso">Curso:</label>
+                    <select id="turma-curso" required>
+                        <option value="">Selecione um curso</option>
+                        <!-- Carregar cursos dinamicamente -->
+                    </select>
+                </div>
+
+                <!-- Professor -->
+                <div class="form-group">
+                    <label for="turma-professor">Professor:</label>
+                    <select id="turma-professor" required>
+                        <option value="">Selecione um professor</option>
+                        <!-- Carregar professores dinamicamente -->
+                    </select>
+                </div>
+
+                <!-- Sala -->
+                <div class="form-group">
+                    <label for="turma-sala">Sala:</label>
+                    <select id="turma-sala" required>
+                        <option value="">Selecione uma sala</option>
+                        <!-- Carregar salas dinamicamente -->
+                    </select>
+                </div>
+
+                <!-- Número de Vagas -->
+                <div class="form-group">
+                    <label for="turma-vagas">Número de Vagas:</label>
+                    <input type="number" id="turma-vagas" min="1" placeholder="Ex: 30" required>
+                </div>
+
+                <!-- Data de Início -->
+                <div class="form-group">
+                    <label for="turma-inicio">Data de Início:</label>
+                    <input type="date" id="turma-inicio" required>
+                </div>
+
+                <!-- Data de Término -->
+                <div class="form-group">
+                    <label for="turma-fim">Data de Término:</label>
+                    <input type="date" id="turma-fim" required>
+                </div>
+
+                <div class="buttons">
+                    <button type="submit" class="save-btn">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="src/js/firebase.js"></script>
+</body>
+
+</html>

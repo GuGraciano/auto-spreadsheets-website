@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turmas</title>
+    <link rel="stylesheet" href="src/css/turmas.css">
+    <link rel="stylesheet" href="src/css/scrollbar.css">
+    <link rel="stylesheet" href="src/css/home.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/breadcrumb.css">
+</head>
+
+<body>
+    <!-- Header Bar -->
+    <div class="header-bar">
+        <ul class="header-links">
+            <li>FIESP</li>
+            <li>CIESP</li>
+            <li>SESI</li>
+            <li>SENAI</li>
+            <li>IRS</li>
+        </ul>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="src/img/SENAI_logo.png" alt="Logo">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="salas.html">Salas</a></li>
+            <li><a href="professores.html">Professores</a></li>
+            <li><a href="turmas.html">Turmas</a></li>
+        </ul>
+
+        <div class="account-info">
+            <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
+            <a href="conta.html"><p>Minha Conta</p></a>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <a href="home.html"><b>Home</b></a> &gt; <span><b>Turmas</b></span>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Buscar turmas...">
+            </div>
+
+            <div class="filter-box">
+                <label for="curso">Curso</label>
+                <select id="curso">
+                    <option value="todos">Todos os Cursos</option>
+                    <option value="tecnologia">Tecnologia</option>
+                    <option value="gestao">Gestão</option>
+                    <option value="saude">Saúde</option>
+                </select>
+            </div>
+
+            <div class="filter-box">
+                <label for="modalidade">Modalidade</label>
+                <select id="modalidade">
+                    <option value="todas">Todas as Modalidades</option>
+                    <option value="presencial">Presencial</option>
+                    <option value="online">Online</option>
+                </select>
+            </div>
+        </aside>
+
+        <!-- Main Section -->
+        <main class="turmas-main">
+            <!-- Button to Create Turmas -->
+            <div class="button-box">
+                <button class="add-turma-btn"><a href="cadastro-turmas.html">Criar Turma</a></button>
+            </div>
+
+            <!-- Cards de Turmas -->
+            <section class="turmas-section">
+                <h2>Turmas Disponíveis</h2>
+                <div class="turma-cards">
+                    <a href="detalhe-turmas.html" class="turma-card">
+                        <h3 class="turma-title">Turma 1 - Curso de Tecnologia</h3>
+                        <p class="turma-description">Data de início: 10/09/2024</p>
+                        <p class="turma-description">Modalidade: Presencial</p>
+                    </a>
+                    <a href="detalhe-turmas.html" class="turma-card">
+                        <h3 class="turma-title">Turma 2 - Curso de Gestão</h3>
+                        <p class="turma-description">Data de início: 12/09/2024</p>
+                        <p class="turma-description">Modalidade: Online</p>
+                    </a>
+                    <a href="detalhe-turmas.html" class="turma-card">
+                        <h3 class="turma-title">Turma 3 - Curso de Saúde</h3>
+                        <p class="turma-description">Data de início: 15/09/2024</p>
+                        <p class="turma-description">Modalidade: Presencial</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="src/js/turmas.js"></script>
+</body>
+
+</html>

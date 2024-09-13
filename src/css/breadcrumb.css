@@ -1,0 +1,20 @@
+/* Breadcrumb */
+.breadcrumb {
+    padding: 10px 24px;
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #ff1010;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #e00d0d;
+}
+
+.breadcrumb span {
+    color: #333;
+}

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="src/css/home.css"> <!-- Certifique-se de incluir o CSS principal -->
     <link rel="stylesheet" href="src/css/scrollbar.css">
     <link rel="stylesheet" href="src/css/cadastro-cursos.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/breadcrumb.css">
 </head>
 <body>
     <!-- Header -->
@@ -29,6 +31,7 @@
                 <li><a href="cursos.html">Cursos</a></li>
                 <li><a href="salas.html">Salas</a></li>
                 <li><a href="professores.html">Professores</a></li>
+                <li><a href="turmas.html">Turmas</a></li>
             </ul>    
             <div class="account-info">
                 <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
@@ -51,19 +54,19 @@
                 <form>
                     <div class="form-group">
                         <label for="course-name">Nome do Curso</label>
-                        <input type="text" id="course-name" name="course-name" required>
+                        <input type="text" id="course-name" name="course-name" placeholder="Digite o nome do curso" required>
                     </div>
                     <div class="form-group">
                         <label for="modality">Modalidade</label>
-                        <select id="modality" name="modality">
+                        <select id="modality" name="modality" required>
                             <option value="presencial">Presencial</option>
-                             <option value="online">Online</option>
+                            <option value="online">Online</option>
                             <option value="hibrido">Híbrido</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="level">Nível</label>
-                        <select id="level" name="level">
+                        <select id="level" name="level" required>
                             <option value="fundamental">Fundamental</option>
                             <option value="intermediario">Intermediário</option>
                             <option value="avancado">Avançado</option>
@@ -71,7 +74,7 @@
                     </div>
                     <div class="form-group">
                         <label for="area">Área</label>
-                        <select id="area" name="area">
+                        <select id="area" name="area" required>
                             <option value="tecnologia">Tecnologia</option>
                             <option value="gestao">Gestão</option>
                             <option value="design">Design</option>
@@ -79,19 +82,19 @@
                     </div>
                     <div class="form-group">
                         <label for="summary">Resumo</label>
-                        <textarea id="summary" name="summary" rows="4" required></textarea>
+                        <textarea id="summary" name="summary" rows="4" placeholder="Digite um resumo do curso" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="duration">Carga Horária</label>
-                        <input type="text" id="duration" name="duration" required>
+                        <input type="text" id="duration" name="duration" placeholder="Ex: 40 horas" required>
                     </div>
                     <div class="form-group">
                         <label for="program">Programação do Curso</label>
-                        <textarea id="program" name="program" rows="6" required></textarea>
+                        <textarea id="program" name="program" rows="6" placeholder="Descreva a programação do curso" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="requirements">Requisitos</label>
-                        <textarea id="requirements" name="requirements" rows="4" required></textarea>
+                        <textarea id="requirements" name="requirements" rows="4" placeholder="Requisitos para o curso" required></textarea>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="submit-btn">Cadastrar Curso</button>

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="src/css/cadastro-professores.css">
     <link rel="stylesheet" href="src/css/home.css">
     <link rel="stylesheet" href="src/css/scrollbar.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/breadcrumb.css">
 </head>
 
 <body>
@@ -32,8 +34,8 @@
             <li><a href="cursos.html">Cursos</a></li>
             <li><a href="salas.html">Salas</a></li>
             <li><a href="professores.html">Professores</a></li>
+            <li><a href="turmas.html">Turmas</a></li>
         </ul>
-
 
         <div class="account-info">
             <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
@@ -47,52 +49,61 @@
 
     <!-- Main Content -->
     <div class="container">
-        <h2>Cadastro de Professor</h2>
-        <form id="cadastroProfessorForm">
-            <div class="form-group">
-                <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" name="nome" required>
-            </div>
+        <div class="form-card">
+            <h2>Cadastro de Professor</h2>
+            <form id="cadastroProfessorForm">
+                <!-- Nome do Professor -->
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: João da Silva" required>
+                </div>
 
-            <div class="form-group">
-                <label for="descricao">Descrição do Professor:</label>
-                <textarea id="descricao" name="descricao" rows="4" required></textarea>
-            </div>
+                <!-- Descrição do Professor -->
+                <div class="form-group">
+                    <label for="descricao">Descrição do Professor:</label>
+                    <textarea id="descricao" name="descricao" rows="4" placeholder="Digite uma breve descrição do professor" required></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="area">Área de Atuação:</label>
-                <select id="area" name="area" required>
-                    <option value="tecnologia">Tecnologia</option>
-                    <option value="gestao">Gestão</option>
-                    <option value="saude">Saúde</option>
-                </select>
-            </div>
+                <!-- Área de Atuação -->
+                <div class="form-group">
+                    <label for="area">Área de Atuação:</label>
+                    <select id="area" name="area" required>
+                        <option value="tecnologia">Tecnologia</option>
+                        <option value="gestao">Gestão</option>
+                        <option value="saude">Saúde</option>
+                    </select>
+                </div>
 
-            <div class="form-group">
-                <label for="nivel">Nível de Ensino:</label>
-                <select id="nivel" name="nivel" required>
-                    <option value="basico">Básico</option>
-                    <option value="intermediario">Intermediário</option>
-                    <option value="avancado">Avançado</option>
-                </select>
-            </div>
+                <!-- Nível de Ensino -->
+                <div class="form-group">
+                    <label for="nivel">Nível de Ensino:</label>
+                    <select id="nivel" name="nivel" required>
+                        <option value="basico">Básico</option>
+                        <option value="intermediario">Intermediário</option>
+                        <option value="avancado">Avançado</option>
+                    </select>
+                </div>
 
-            <div class="form-group">
-                <label for="curso">Curso Associado:</label>
-                <select id="curso" name="curso" required>
-                    <option value="curso1">Curso 1</option>
-                    <option value="curso2">Curso 2</option>
-                    <option value="curso3">Curso 3</option>
-                </select>
-            </div>
+                <!-- Curso Associado -->
+                <div class="form-group">
+                    <label for="curso">Curso Associado:</label>
+                    <select id="curso" name="curso" required>
+                        <option value="curso1">Curso 1</option>
+                        <option value="curso2">Curso 2</option>
+                        <option value="curso3">Curso 3</option>
+                    </select>
+                </div>
 
-            <div class="form-group">
-                <label for="imagem">Foto do Professor:</label>
-                <input type="file" id="imagem" name="imagem" accept="image/*" required>
-            </div>
+                <!-- Foto do Professor -->
+                <div class="form-group">
+                    <label for="imagem">Foto do Professor:</label>
+                    <input type="file" id="imagem" name="imagem" accept="image/*" required>
+                </div>
 
-            <button type="submit" class="submit-btn">Cadastrar Professor</button>
-        </form>
+                <!-- Botão -->
+                <button type="submit" class="submit-btn">Cadastrar Professor</button>
+            </form>
+        </div>
     </div>
 
     <script src="src/js/cadastro-professores.js"></script>

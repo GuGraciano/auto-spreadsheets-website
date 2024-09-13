@@ -1,124 +1,35 @@
-*,
-*::before,
-*::after {
+/* Reset básico */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
     overflow-x: hidden;
 }
 
-/* Header Bar */
-.header-bar {
-    background-color: #ff1010;
-}
-
-.header-links {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    gap: 32px;
-    padding: 0 10px;
-    justify-content: end;
-}
-
-.header-links li {
-    font-weight: bold;
-    color: #ffffff;
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    align-items: center;
-    padding: 12px 24px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid #ff1010;
-    background-color: #fff;
-}
-
-.navbar .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navbar .logo img {
-    height: 40px;
-}
-
-.navbar .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar .nav-links a {
-    color: #333;
-    padding: 8px 12px;
-    transition: color 0.3s ease;
-}
-
-.navbar .nav-links a:hover {
-    color: #ff1010;
-}
-
-.account-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-}
-
-.profile-img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    margin-right: 8px;
-}
-
-/* Breadcrumb */
-.breadcrumb {
-    padding: 10px 24px;
-    font-size: 14px;
-    color: #666;
-}
-
-.breadcrumb a {
-    color: #ff1010;
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-.breadcrumb span {
-    color: #333;
-}
-
 /* Detalhes do Professor */
 .container {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
 }
 
+/* Card de Detalhes do Professor */
 .professor-card {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 8px;
-    padding: 20px;
+    padding: 30px;
+    width: 100%;
 }
 
+/* Informações do Professor */
 .professor-info {
     display: flex;
     gap: 20px;
@@ -130,6 +41,7 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 8px; /* Sombra na imagem */
 }
 
 .professor-details {
@@ -137,13 +49,23 @@ body {
 }
 
 .professor-details h1 {
-    font-size: 24px;
+    font-size: 28px;
     color: #ff1010;
     margin-bottom: 10px;
 }
 
 .professor-details p {
     margin-bottom: 10px;
+    font-size: 16px;
+    color: #444;
+}
+
+/* Informações de Contato */
+.contact-info {
+    background-color: #f0f0f0;
+    border-left: 5px solid #ff1010;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .contact-info h2 {
@@ -154,6 +76,8 @@ body {
 
 .contact-info p {
     margin-bottom: 10px;
+    font-size: 16px;
+    color: #444;
 }
 
 /* Responsividade */
@@ -166,5 +90,9 @@ body {
     .professor-img {
         width: 120px;
         height: 120px;
+    }
+
+    .professor-details h1 {
+        text-align: center;
     }
 }

@@ -1,7 +1,4 @@
-/* Reset básico */
-*,
-*::before,
-*::after {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -128,27 +125,4 @@ body {
 .profile-img-container img {
     width: 190px;
     height: 190px;
-}
-
-/* Breadcrumb */
-.breadcrumb {
-    margin: 20px 0; /* Ajuste a margem superior e inferior */
-    padding-left: 20px; /* Adiciona um preenchimento à esquerda para deslocar o breadcrumb */
-    font-size: 14px;
-    color: #666;
-    max-width: 800px;
-}
-
-.breadcrumb a {
-    color: #ff1010;
-    text-decoration: none;
-    margin-right: 5px;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-.breadcrumb span {
-    color: #333;
 }
