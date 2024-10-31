@@ -6,97 +6,117 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
     color: #333;
-    background-color: #f4f6f8; /* Fundo suave */
+    background-color: #f8f8f8;
 }
 
-/* Container principal */
 .container {
-    max-width: 960px;
+    max-width: 800px;
     margin: 40px auto;
     padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
 }
 
-/* Card de Cadastro de Curso */
-.form-card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    padding: 40px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Breadcrumb */
+.breadcrumb {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
 }
 
-.form-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra mais intensa ao passar o mouse */
+/* Título */
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
 }
 
-.form-card h2 {
-    font-size: 28px;
-    color: #ff6f61; /* Vermelho suave */
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Estilos dos campos de formulário */
-.form-group {
+/* Selectors */
+.selectors {
+    display: flex;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
-.form-group label {
-    font-size: 16px;
-    color: #666;
-    display: block;
-    margin-bottom: 8px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
+.selector {
+    flex: 1;
+    padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    color: #555;
+    appearance: none;
 }
 
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-    border-color: #ff6f61;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    outline: none;
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-/* Botão de Envio */
-.submit-btn {
-    background-color: #4CAF50; /* Verde moderno */
-    color: #fff;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 6px;
-    font-size: 18px;
+/* Formulário */
+.form-fields label {
+    display: block;
     font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
-.submit-btn:hover {
-    background-color: #45a049;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+textarea,
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #555;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Botões */
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn.primary {
+    background-color: #cc0000;
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background-color: #990000;
+}
+
+.btn.secondary {
+    background-color: #e0e0e0;
+    color: #666;
+}
+
+.btn.secondary:hover {
+    background-color: #ccc;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .form-card {
-        padding: 20px;
+    .selectors {
+        flex-direction: column;
     }
 }

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Professor</title>
     <link rel="stylesheet" href="src/css/cadastro-professores.css">
-    <link rel="stylesheet" href="src/css/home.css">
-    <link rel="stylesheet" href="src/css/scrollbar.css">
-    <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/breadcrumb.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/scrollbar.css">
+
 </head>
 
 <body>
@@ -43,6 +43,7 @@
         </div>
     </nav>
 
+    <!-- Breadcrumb -->
     <div class="breadcrumb">
         <a href="home.html"><b>Home</b></a> &gt; <a href="professores.html"><b>Professores</b></a> &gt; <span><b>Cadastro de Professor</b></span>
     </div>
@@ -98,6 +99,7 @@
                 <div class="form-group">
                     <label for="imagem">Foto do Professor:</label>
                     <input type="file" id="imagem" name="imagem" accept="image/*" required>
+                    <img id="imagemPreview" src="#" alt="Pré-visualização da Imagem" style="display:none; margin-top: 10px; width: 100px; border-radius: 50%;">
                 </div>
 
                 <!-- Botão -->

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Curso</title>
-    <link rel="stylesheet" href="src/css/home.css"> <!-- Certifique-se de incluir o CSS principal -->
+    <link rel="stylesheet" href="src/css/home.css">
     <link rel="stylesheet" href="src/css/scrollbar.css">
     <link rel="stylesheet" href="src/css/cadastro-cursos.css">
     <link rel="stylesheet" href="src/css/header.css">
@@ -31,8 +31,7 @@
                 <li><a href="cursos.html">Cursos</a></li>
                 <li><a href="salas.html">Salas</a></li>
                 <li><a href="professores.html">Professores</a></li>
-                <li><a href="turmas.html">Turmas</a></li>
-            </ul>    
+            </ul>
             <div class="account-info">
                 <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
                 <a href="conta.html"><p>Minha Conta</p></a>
@@ -41,7 +40,7 @@
 
         <!-- Breadcrumb -->
         <div class="breadcrumb">
-            <a href="home.html"><b>Home</b></a> &gt; <a href="cursos.html"><b>Cursos</b></a> &gt; <span><b>Cadastro de Curso</b></span>
+            <a href="home.html"><b>Home</b></a> &gt; <a href="cursos.html"><b>Cursos</b></a> &gt; <span><b>Adicionar</b></span>
         </div>
     </header>
 
@@ -49,58 +48,45 @@
     <main class="container">
         <!-- Formulário de Cadastro -->
         <div class="form-section">
-            <div class="form-card">
-                <h2>Cadastro de Curso</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="course-name">Nome do Curso</label>
-                        <input type="text" id="course-name" name="course-name" placeholder="Digite o nome do curso" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="modality">Modalidade</label>
-                        <select id="modality" name="modality" required>
-                            <option value="presencial">Presencial</option>
-                            <option value="online">Online</option>
-                            <option value="hibrido">Híbrido</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="level">Nível</label>
-                        <select id="level" name="level" required>
-                            <option value="fundamental">Fundamental</option>
-                            <option value="intermediario">Intermediário</option>
-                            <option value="avancado">Avançado</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="area">Área</label>
-                        <select id="area" name="area" required>
-                            <option value="tecnologia">Tecnologia</option>
-                            <option value="gestao">Gestão</option>
-                            <option value="design">Design</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="summary">Resumo</label>
-                        <textarea id="summary" name="summary" rows="4" placeholder="Digite um resumo do curso" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="duration">Carga Horária</label>
-                        <input type="text" id="duration" name="duration" placeholder="Ex: 40 horas" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="program">Programação do Curso</label>
-                        <textarea id="program" name="program" rows="6" placeholder="Descreva a programação do curso" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="requirements">Requisitos</label>
-                        <textarea id="requirements" name="requirements" rows="4" placeholder="Requisitos para o curso" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="submit-btn">Cadastrar Curso</button>
-                    </div>
-                </form>
-            </div>
+            <h2>Insira o nome do curso</h2>
+            <form>
+                <!-- Seletor de área e modalidade -->
+                <div class="selectors">
+                    <select name="area" class="selector">
+                        <option>Selecionar Área</option>
+                    </select>
+                    <select name="nivel" class="selector">
+                        <option>Selecionar Nível</option>
+                    </select>
+                    <select name="modalidade" class="selector">
+                        <option>Selecionar Modalidade</option>
+                    </select>
+                    <select name="docente" class="selector">
+                        <option>Selecionar Docente</option>
+                    </select>
+                </div>
+
+                <!-- Campos de texto e descrição -->
+                <div class="form-fields">
+                    <label for="summary">Resumo</label>
+                    <textarea id="summary" placeholder="Insira uma descrição breve do curso"></textarea>
+
+                    <label for="duration">Carga Horária:</label>
+                    <input type="text" id="duration" placeholder="Insira a carga horária do curso">
+
+                    <label for="program">Programação:</label>
+                    <textarea id="program" placeholder="Insira a programação do curso"></textarea>
+
+                    <label for="requirements">Requisitos:</label>
+                    <textarea id="requirements" placeholder="Insira os requisitos para o curso"></textarea>
+                </div>
+
+                <!-- Botões -->
+                <div class="buttons">
+                    <button type="button" class="btn secondary">EXCLUIR</button>
+                    <button type="submit" class="btn primary">SALVAR</button>
+                </div>
+            </form>
         </div>
     </main>
 

@@ -13,20 +13,21 @@ body {
     overflow-x: hidden;
 }
 
-/* Detalhes do Professor */
+
+/* Container principal */
 .container {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 60px auto 20px;
     padding: 20px;
 }
 
 /* Card de Detalhes do Professor */
 .professor-card {
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 8px;
     padding: 30px;
-    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 8px;
+    border: 2px solid #333;
 }
 
 /* Informações do Professor */
@@ -62,10 +63,8 @@ body {
 
 /* Informações de Contato */
 .contact-info {
-    background-color: #f0f0f0;
-    border-left: 5px solid #ff1010;
-    padding: 20px;
-    border-radius: 8px;
+    border-top: 2px solid #ff1010;
+    padding-top: 20px;
 }
 
 .contact-info h2 {

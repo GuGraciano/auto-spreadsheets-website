@@ -1,5 +1,5 @@
 /* Reset básico */
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -7,85 +7,92 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
     overflow-x: hidden;
 }
 
+
 /* Detalhes do Curso */
 .course-detail {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 60px auto 20px;
     padding: 20px;
 }
 
 .course-details {
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     padding: 30px;
-    width: 100%;
 }
 
 .course-details h1 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #ff1010;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
     text-align: center;
 }
 
-.course-meta {
+/* Botões de Tags */
+.tags {
     display: flex;
-    flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
-    font-size: 16px;
-    color: #666;
+}
+
+.tag-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.tag-btn:hover, .tag-btn.active {
+    background-color: #ff1010;
+    color: #ffffff;
+    border-color: #ff1010;
+}
+
+/* Borda no Card */
+.bordered-card {
+    padding: 20px;
+    border: 2px solid #c5bfbf;
+    border-radius: 10px;
 }
 
 .course-summary {
-    margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 1.8;
-    color: #333;
-}
-
-.course-extra-info {
-    margin-bottom: 20px;
-}
-
-.info-item {
-    background-color: #f0f0f0;
-    border-left: 5px solid #ff1010;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
-
-.info-item h3 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.info-item p {
     font-size: 16px;
-    color: #444;
+    line-height: 1.8;
 }
 
+.course-summary ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.course-summary li {
+    margin-bottom: 10px;
+}
+
+/* Botão Editar */
 .edit-button {
-    display: block;
+    display: inline-block;
     background-color: #ff1010;
     color: #ffffff;
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: 10px 20px;
+    border-radius: 20px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
+    margin-top: 20px;
     transition: background-color 0.3s ease;
-    width: 100%;
 }
 
 .edit-button:hover {

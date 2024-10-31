@@ -1,78 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Sala</title>
-    <link rel="stylesheet" href="src/css/casastro-salas.css">
+    <link rel="stylesheet" href="src/css/cadastro-salas.css">
     <link rel="stylesheet" href="src/css/scrollbar.css">
     <link rel="stylesheet" href="src/css/home.css">
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/breadcrumb.css">
 </head>
-
 <body>
-    <!-- Header Bar -->
-    <div class="header-bar">
-        <ul class="header-links">
-            <li>FIESP</li>
-            <li>CIESP</li>
-            <li>SESI</li>
-            <li>SENAI</li>
-            <li>IRS</li>
-        </ul>
-    </div>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <a href="index.html" class="logo">
-            <img src="src/img/SENAI_logo.png" alt="Logo">
-        </a>
-
-        <ul class="nav-links">
-            <li><a href="cursos.html">Cursos</a></li>
-            <li><a href="salas.html">Salas</a></li>
-            <li><a href="professores.html">Professores</a></li>
-            <li><a href="turmas.html">Turmas</a></li>
-        </ul>
-
-        <div class="account-info">
-            <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
-            <a href="conta.html"><p>Minha Conta</p></a>
+    <!-- Header -->
+    <header>
+        <div class="header-bar">
+            <ul class="header-links">
+                <li>FIESP</li>
+                <li>CIESP</li>
+                <li>SESI</li>
+                <li>SENAI</li>
+                <li>IRS</li>
+            </ul>
         </div>
-    </nav>
 
-    <div class="breadcrumb">
-        <a href="home.html"><b>Home</b></a> &gt; <a href="salas.html"><b>Salas</b></a> &gt; <span><b>Cadastrar Sala</b></span>
-    </div>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="src/img/SENAI_logo.png" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="salas.html">Salas</a></li>
+                <li><a href="professores.html">Professores</a></li>
+                <li><a href="turmas.html">Turmas</a></li>
+            </ul>
+            <div class="account-info">
+                <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
+                <a href="conta.html"><p>Minha Conta</p></a>
+            </div>
+        </nav>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="home.html"><b>Home</b></a> &gt; <a href="salas.html"><b>Salas</b></a> &gt; <span><b>Cadastrar Sala</b></span>
+        </div>
+    </header>
 
     <!-- Main Content -->
-    <div class="container">
-        <!-- Card de Cadastro da Sala -->
+    <main class="container">
         <div class="room-form-card">
             <h2>Cadastrar Nova Sala</h2>
-
             <form id="room-form">
-                <!-- Nome da Sala -->
                 <div class="form-group">
                     <label for="room-name">Nome da Sala:</label>
                     <input type="text" id="room-name" name="room-name" placeholder="Ex: Sala 01" required>
                 </div>
-
-                <!-- Descrição -->
                 <div class="form-group">
                     <label for="room-description">Descrição:</label>
                     <textarea id="room-description" name="room-description" rows="4" placeholder="Digite uma breve descrição da sala" required></textarea>
                 </div>
-
-                <!-- Capacidade -->
                 <div class="form-group">
                     <label for="room-capacity">Capacidade:</label>
                     <input type="number" id="room-capacity" name="room-capacity" min="1" placeholder="Ex: 30" required>
                 </div>
-
-                <!-- Equipamentos Disponíveis -->
                 <div class="form-group">
                     <label for="room-equipment">Equipamentos Disponíveis:</label>
                     <select id="room-equipment" name="room-equipment" multiple required>
@@ -83,14 +72,10 @@
                         <option value="quadro">Quadro</option>
                     </select>
                 </div>
-
-                <!-- Data -->
                 <div class="form-group">
                     <label for="room-date">Data:</label>
                     <input type="date" id="room-date" name="room-date" required>
                 </div>
-
-                <!-- Aula -->
                 <div class="form-group">
                     <label for="room-class">Aula:</label>
                     <select id="room-class" name="room-class" required>
@@ -101,17 +86,14 @@
                         <option value="ciências">Ciências</option>
                     </select>
                 </div>
-
-                <!-- Botões -->
                 <div class="buttons">
-                    <button type="submit" class="save-btn">Salvar</button>
-                    <button type="reset" class="cancel-btn">Cancelar</button>
+                    <button type="submit" class="btn primary">Salvar</button>
+                    <button type="reset" class="btn secondary">Cancelar</button>
                 </div>
             </form>
         </div>
-    </div>
+    </main>
 
     <script src="src/js/cadastro-salas.js"></script>
 </body>
-
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,6 @@
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/breadcrumb.css">
 </head>
-
 <body>
     <!-- Header Bar -->
     <div class="header-bar">
@@ -51,27 +49,29 @@
     <div class="container">
         <!-- Card de Detalhes da Sala -->
         <div class="room-details-card">
-            <h2>Detalhes da Sala 1</h2>
-
-            <div class="room-info">
-                <p><strong>Descrição:</strong> Sala equipada para aulas teóricas e práticas, com infraestrutura adequada para atender às necessidades dos alunos e professores.</p>
-                <p><strong>Capacidade:</strong> 30 alunos</p>
-                <p><strong>Equipamentos Disponíveis:</strong> Projetor, Computadores, Mesas e Cadeiras, Ar-condicionado</p>
-                <p><strong>Agendamentos:</strong> 
-                   <ul>
-                       <li>15/08/2024 - Aula de Matemática (8h às 10h)</li>
-                       <li>16/08/2024 - Workshop de Programação (14h às 18h)</li>
-                   </ul>
-                </p>
-                <p><strong>Disponibilidade:</strong> Disponível</p>
+            <h2>Sala <span class="room-number">#000</span></h2>
+            <div class="status-tags">
+                <span class="status disponivel">Disponível</span>
+                <span class="course-tag">Curso, curso</span>
             </div>
-
+            <div class="summary">
+                <h3>Resumo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p><strong>Capacidade:</strong> 30</p>
+                <p><strong>Agendamentos:</strong></p>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>consectetur adipiscing elit, sed do eiusmod tempor incididunt.</li>
+                    <li>ut labore et dolore magna aliqua.</li>
+                    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</li>
+                </ul>
+            </div>
             <!-- Botões -->
             <div class="buttons">
-                <button class="manage-equipment-btn">Gerenciar Equipamentos</button>
-                <div class="save-cancel">
-                    <button class="save-btn">Salvar</button>
-                    <button class="cancel-btn">Cancelar</button>
+                <button class="manage-equipment-btn">GERENCIAR MAQUINÁRIO</button>
+                <div class="action-buttons">
+                    <button class="delete-btn">EXCLUIR</button>
+                    <button class="save-btn">SALVAR</button>
                 </div>
             </div>
         </div>
@@ -79,5 +79,4 @@
 
     <script src="src/js/detalhe-salas.js"></script>
 </body>
-
 </html>

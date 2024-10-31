@@ -6,131 +6,130 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
     color: #333;
-    background-color: #f4f6f8; /* Fundo suave */
+    background-color: #f4f4f4;
 }
 
-/* Container principal */
+/* Container */
 .container {
-    max-width: 960px;
+    max-width: 900px;
     margin: 40px auto;
     padding: 20px;
 }
 
-/* Card de Detalhes da Sala */
-.room-details-card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    padding: 40px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Breadcrumb */
+.breadcrumb {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
 }
 
-.room-details-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra mais intensa ao passar o mouse */
+/* Room Details Card */
+.room-details-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
 }
 
 .room-details-card h2 {
-    font-size: 28px;
-    color: #ff6f61; /* Vermelho suave */
-    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.room-number {
+    color: #888;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/* Status Tags */
+.status-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.status.disponivel {
+    border: 1px solid red;
+    color: red;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.course-tag {
+    border: 1px solid #888;
+    color: #888;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+/* Summary */
+.summary {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 6px;
     margin-bottom: 30px;
 }
 
-.room-info {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 40px;
+.summary h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.room-info p {
-    margin-bottom: 14px;
-}
-
-.room-info ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-/* Botões */
+/* Buttons */
 .buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.manage-equipment-btn {
-    background-color: #ff1010;
-    color: #fff;
-    padding: 14px 28px;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.manage-equipment-btn:hover {
-    background-color: #e00d0d;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.save-cancel {
-    display: flex;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    margin-top: 20px;
 }
 
+/* Botões Estilos */
+.manage-equipment-btn,
 .save-btn,
-.cancel-btn {
-    font-size: 18px;
-    padding: 12px 24px;
-    border-radius: 6px;
+.delete-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 20px;
     font-weight: bold;
-    border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border: none;
 }
 
+.manage-equipment-btn,
 .save-btn {
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: #ff3030; /* Vermelho */
+    color: white;
 }
 
+.manage-equipment-btn:hover,
 .save-btn:hover {
-    background-color: #45a049;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: #ff3030;
+    box-shadow: 0 4px 12px rgba(255, 75, 75, 0.3);
 }
 
-.cancel-btn {
-    background-color: #f44336;
-    color: #fff;
+.delete-btn {
+    background-color: #ddd; /* Cinza */
+    color: #555;
 }
 
-.cancel-btn:hover {
-    background-color: #e53935;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+.delete-btn:hover {
+    background-color: #bbb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .room-details-card {
-        padding: 20px;
-    }
-
-    .save-cancel {
+    .buttons {
         flex-direction: column;
         gap: 10px;
-    }
-
-    .save-btn,
-    .cancel-btn {
-        width: 100%;
     }
 }
