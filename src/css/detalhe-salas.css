@@ -18,27 +18,20 @@ body {
     padding: 20px;
 }
 
-/* Breadcrumb */
-.breadcrumb {
-    text-align: left;
-    margin-bottom: 20px;
-    font-size: 14px;
-    color: #555;
-}
-
 /* Room Details Card */
 .room-details-card {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
 }
 
-.room-details-card h2 {
-    font-size: 24px;
+.room-details-card h1 {
+    font-size: 35px;
     color: #333;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .room-number {
@@ -55,25 +48,25 @@ body {
 }
 
 .status.disponivel {
-    border: 1px solid red;
+    border: 1.5px solid red;
     color: red;
     padding: 5px 10px;
-    border-radius: 8px;
+    border-radius: 20px;
 }
 
 .course-tag {
-    border: 1px solid #888;
+    border: 1.5px solid #888;
     color: #888;
     padding: 5px 10px;
-    border-radius: 8px;
+    border-radius: 20px;
 }
 
 /* Summary */
 .summary {
     background-color: #fafafa;
-    border: 1px solid #ddd;
+    border: 1px solid #d3d2d2;
     padding: 20px;
-    border-radius: 6px;
+    border-radius: 20px;
     margin-bottom: 30px;
 }
 
@@ -106,24 +99,13 @@ body {
 
 .manage-equipment-btn,
 .save-btn {
-    background-color: #ff3030; /* Vermelho */
+    background-color: #ff1010; /* Vermelho */
     color: white;
 }
 
 .manage-equipment-btn:hover,
 .save-btn:hover {
-    background-color: #ff3030;
-    box-shadow: 0 4px 12px rgba(255, 75, 75, 0.3);
-}
-
-.delete-btn {
-    background-color: #ddd; /* Cinza */
-    color: #555;
-}
-
-.delete-btn:hover {
-    background-color: #bbb;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #e00d0d;
 }
 
 /* Responsividade */

@@ -21,20 +21,16 @@ body {
     font-size: 14px;
 }
 
-/* Breadcrumb */
-.breadcrumb {
+/* Input do nome do curso */
+.input-invisivel {
+    font-size: 35px;
+    color: #ff1010;               /* Cor do texto do input */
     margin-bottom: 20px;
-    font-size: 14px;
-    color: #555;
-}
-
-/* Título */
-h2 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
+    background-color: transparent; /* Fundo invisível */
+    border: none;                  /* Sem bordas */
+    outline: none;                 /* Sem contorno */
+    width: 100%;    
 }
 
 /* Selectors */
@@ -65,7 +61,7 @@ h2 {
 }
 
 textarea,
-input[type="text"] {
+input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;

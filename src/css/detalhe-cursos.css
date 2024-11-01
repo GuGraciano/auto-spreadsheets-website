@@ -18,6 +18,7 @@ body {
     max-width: 800px;
     margin: 60px auto 20px;
     padding: 20px;
+    
 }
 
 .course-details {
@@ -29,9 +30,9 @@ body {
 
 .course-details h1 {
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 35px;
     font-weight: bold;
-    color: #333;
+    color: #000000;
     text-align: center;
 }
 
@@ -62,7 +63,8 @@ body {
 /* Borda no Card */
 .bordered-card {
     padding: 20px;
-    border: 2px solid #c5bfbf;
+    background-color: #fafafafa;
+    border: 1px solid #d3d2d2;
     border-radius: 10px;
 }
 

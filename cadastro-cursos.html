@@ -43,53 +43,55 @@
             <a href="home.html"><b>Home</b></a> &gt; <a href="cursos.html"><b>Cursos</b></a> &gt; <span><b>Adicionar</b></span>
         </div>
     </header>
-
-    <!-- Main Content -->
-    <main class="container">
-        <!-- Formulário de Cadastro -->
-        <div class="form-section">
-            <h2>Insira o nome do curso</h2>
-            <form>
-                <!-- Seletor de área e modalidade -->
-                <div class="selectors">
-                    <select name="area" class="selector">
-                        <option>Selecionar Área</option>
-                    </select>
-                    <select name="nivel" class="selector">
-                        <option>Selecionar Nível</option>
-                    </select>
-                    <select name="modalidade" class="selector">
-                        <option>Selecionar Modalidade</option>
-                    </select>
-                    <select name="docente" class="selector">
-                        <option>Selecionar Docente</option>
-                    </select>
-                </div>
-
-                <!-- Campos de texto e descrição -->
-                <div class="form-fields">
-                    <label for="summary">Resumo</label>
-                    <textarea id="summary" placeholder="Insira uma descrição breve do curso"></textarea>
-
-                    <label for="duration">Carga Horária:</label>
-                    <input type="text" id="duration" placeholder="Insira a carga horária do curso">
-
-                    <label for="program">Programação:</label>
-                    <textarea id="program" placeholder="Insira a programação do curso"></textarea>
-
-                    <label for="requirements">Requisitos:</label>
-                    <textarea id="requirements" placeholder="Insira os requisitos para o curso"></textarea>
-                </div>
-
-                <!-- Botões -->
-                <div class="buttons">
-                    <button type="button" class="btn secondary">EXCLUIR</button>
-                    <button type="submit" class="btn primary">SALVAR</button>
-                </div>
-            </form>
-        </div>
-    </main>
-
-    <script src="src/js/home.js"></script>
-</body>
-</html>
+        <!-- Main Content -->
+        <main class="container">
+            <!-- Formulário de Cadastro -->
+            <div class="form-section">
+                <!-- Campo do nome do curso -->
+                <input type="text" class="input-invisivel" placeholder="Insira o nome do curso">
+                
+                <form>
+                    <!-- Seletor de área e modalidade -->
+                    <div class="selectors">
+                        <select name="area" class="selector">
+                            <option>Selecionar Área</option>
+                        </select>
+                        <select name="nivel" class="selector">
+                            <option>Selecionar Nível</option>
+                        </select>
+                        <select name="modalidade" class="selector">
+                            <option>Selecionar Modalidade</option>
+                        </select>
+                        <select name="docente" class="selector">
+                            <option>Selecionar Docente</option>
+                        </select>
+                    </div>
+    
+                    <!-- Campos de texto e descrição -->
+                    <div class="form-fields">
+                        <label for="summary">Resumo</label>
+                        <textarea id="summary" placeholder="Insira uma descrição breve do curso"></textarea>
+    
+                        <label for="duration">Carga Horária:</label>
+                        <input type="text" id="duration" placeholder="Insira a carga horária do curso">
+    
+                        <label for="program">Programação:</label>
+                        <textarea id="program" placeholder="Insira a programação do curso"></textarea>
+    
+                        <label for="requirements">Requisitos:</label>
+                        <textarea id="requirements" placeholder="Insira os requisitos para o curso"></textarea>
+                    </div>
+    
+                    <!-- Botões -->
+                    <div class="buttons">
+                        <button type="button" class="btn secondary">EXCLUIR</button>
+                        <button type="submit" class="btn primary">SALVAR</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    
+        <script src="src/js/home.js"></script>
+    </body>
+    </html>
+    
