@@ -33,6 +33,12 @@ body {
     width: 100%;    
 }
 
+::placeholder{
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+  
+
 /* Selectors */
 .selectors {
     display: flex;
