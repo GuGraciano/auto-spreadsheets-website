@@ -1,182 +1,181 @@
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
 }
 /* Container principal */
 .container {
-    display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    gap: 20px; /* Adiciona um espaçamento entre o sidebar e a seção principal */
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  gap: 20px; /* Adiciona um espaçamento entre o sidebar e a seção principal */
 }
 
 /* Sidebar */
 .sidebar {
-    width: 280px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 8px;
-    position: sticky;
-    top: 20px;
-    left: 0;
-    height: 100%;
-    overflow-y: auto; /* Adiciona rolagem se necessário */
+  width: 280px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 8px;
+  position: sticky;
+  top: 20px;
+  left: 0;
+  height: 100%;
+  overflow-y: auto; /* Adiciona rolagem se necessário */
 }
 
 .sidebar .search-box input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    transition: border-color 0.3s;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s;
 }
 
 .sidebar .search-box input:focus {
-    border-color: #ff1010;
-    outline: none;
+  border-color: #ff1010;
+  outline: none;
 }
 
 .filter-box {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 30px;
 }
 
 .filter-box label {
-    font-weight: bold;
-    color: #333;
-    font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
 }
 
 .filter-box select,
 .filter-box input[type="checkbox"] {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 .checkbox-label {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 15px;
 }
 
 /* Main Section */
 .courses-main {
-    flex: 1;
+  flex: 1;
 }
 
 .button-box {
-    text-align: center;
-    margin-bottom: 20px; /* Espaçamento abaixo do botão */
+  text-align: center;
+  margin-bottom: 20px; /* Espaçamento abaixo do botão */
 }
 
 .add-course-btn {
-    background-color: #ff1010;
-    color: #ffffff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #ff1010;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .add-course-btn:hover {
-    background-color: #e00d0d;
+  background-color: #e00d0d;
 }
 
 /* Seção de Cursos */
 .courses-section {
-    padding: 0 20px;
+  padding: 0 20px;
 }
 
 .courses-section h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #ff1010;
-    text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #ff1010;
+  text-align: center;
 }
 
 .course-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .course-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 8px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: block; /* Faz com que o card ocupe toda a área do link */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block; /* Faz com que o card ocupe toda a área do link */
 }
 
 .course-card:hover {
-    transform: translateY(-8px);
-    box-shadow: rgba(0, 0, 0, 0.15) 0 6px 12px;
+  transform: translateY(-8px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0 6px 12px;
 }
 
 .course-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 16px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
 }
 
 .course-card h3 {
-    margin-bottom: 12px;
-    font-size: 22px;
-    color: #333;
+  margin-bottom: 4px;
+  font-size: 22px;
+  color: #333;
 }
 
 .course-card p {
-    font-size: 16px;
-    color: #666;
+  font-size: 16px;
+  color: #666;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 10px;
-    }
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
 
-    .sidebar {
-        width: 100%;
-        position: static; /* Remove a fixação em telas menores */
-        margin-bottom: 20px;
-        height: auto; /* Remove a altura fixa */
-    }
+  .sidebar {
+    width: 100%;
+    position: static; /* Remove a fixação em telas menores */
+    margin-bottom: 20px;
+    height: auto; /* Remove a altura fixa */
+  }
 
-    .courses-main {
-        padding-left: 0; /* Remove o espaço do sidebar fixo */
-    }
+  .courses-main {
+    padding-left: 0; /* Remove o espaço do sidebar fixo */
+  }
 
-    .course-cards {
-        grid-template-columns: 1fr;
-    }
+  .course-cards {
+    grid-template-columns: 1fr;
+  }
 }
 .course-cards a {
-    text-decoration: none; /* Remove underline dos links */
-    color: inherit; /* Mantém a cor do texto */
+  text-decoration: none; /* Remove underline dos links */
+  color: inherit; /* Mantém a cor do texto */
 }

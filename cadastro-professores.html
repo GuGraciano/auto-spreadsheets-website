@@ -1,123 +1,182 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro de Professor</title>
-    <link rel="stylesheet" href="src/css/cadastro-professores.css">
-    <link rel="stylesheet" href="src/css/header.css">
-    <link rel="stylesheet" href="src/css/scrollbar.css">
-    <link rel="stylesheet" href="src/css/breadcrumb.css">
-    <link rel="stylesheet" href="src/css/cadastro-professores.css">
+    <link rel="stylesheet" href="src/css/cadastro-professores.css" />
+    <link rel="stylesheet" href="src/css/header.css" />
+    <link rel="stylesheet" href="src/css/scrollbar.css" />
+    <link rel="stylesheet" href="src/css/breadcrumb.css" />
+    <link rel="stylesheet" href="src/css/cadastro-professores.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- Header -->
     <header>
-        <div class="header-bar">
-            <ul class="header-links">
-                <li>FIESP</li>
-                <li>CIESP</li>
-                <li>SESI</li>
-                <li>SENAI</li>
-                <li>IRS</li>
-            </ul>
-        </div>
+      <div class="header-bar">
+        <ul class="header-links">
+          <li>FIESP</li>
+          <li>CIESP</li>
+          <li>SESI</li>
+          <li>SENAI</li>
+          <li>IRS</li>
+        </ul>
+      </div>
 
-        <nav class="navbar">
-            <a href="index.html" class="logo">
-                <img src="src/img/SENAI_logo.png" alt="Logo">
-            </a>
-            <ul class="nav-links">
-                <li><a href="cursos.html">Cursos</a></li>
-                <li><a href="salas.html">Salas</a></li>
-                <li><a href="professores.html">Professores</a></li>
-                <li><a href="turmas.html">Turmas</a></li>
-            </ul>
-            <div class="account-info">
-                <img src="src/img/blank-profile-picture-973460_960_720.webp" alt="Minha Conta" class="profile-img">
-                <a href="conta.html"><p>Minha Conta</p></a>
-            </div>
-        </nav>
-
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <a href="home.html"><b>Home</b></a> &gt; <a href="salas.html"><b>Salas</b></a> &gt; <span><b>Cadastrar Sala</b></span>
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="src/img/SENAI_logo.png" alt="Logo" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="salas.html">Salas</a></li>
+          <li><a href="professores.html">Professores</a></li>
+          <li><a href="turmas.html">Turmas</a></li>
+        </ul>
+        <div class="account-info">
+          <img
+            src="src/img/blank-profile-picture-973460_960_720.webp"
+            alt="Minha Conta"
+            class="profile-img"
+          />
+          <a href="conta.html"><p>Minha Conta</p></a>
         </div>
+      </nav>
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="home.html"><b>Home</b></a> &gt;
+        <a href="professores.html"><b>Professores</b></a> &gt;
+        <span><b>Cadastrar Professores</b></span>
+      </div>
     </header>
-
 
     <!-- Main Content -->
     <div class="container">
-        <div class="form-card">
-            <h2>Cadastro de Professor</h2>
-            <form id="cadastroProfessorForm">
-                <!-- Foto do Professor -->
-                <div class="form-group foto-preview">
-                    <img id="imagemPreview" src="src/img/blank-profile-picture.png" alt="Pré-visualização da Imagem">
-                    <input type="file" id="imagem" name="imagem" accept="image/*" required>
-                </div>
+      <div class="form-card">
+        <h2>Cadastro de Professor</h2>
+        <form id="cadastroProfessorForm">
+          <!-- Foto do Professor -->
+          <div class="form-group foto-preview">
+            <img
+              id="imagemPreview"
+              src="https://static.vecteezy.com/system/resources/thumbnails/004/511/281/small/default-avatar-photo-placeholder-profile-picture-vector.jpg"
+              alt="Pré-visualização da Imagem"
+            />
+            <input
+              type="file"
+              id="imagem"
+              name="imagem"
+              accept="image/*"
+              required
+            />
+          </div>
 
-                <!-- Nome do Professor -->
-                <div class="form-group">
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Ex: João da Silva" required>
-                </div>
+          <!-- Nome do Professor -->
+          <div class="form-group">
+            <label for="nome">Nome Completo:</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Ex: João da Silva"
+              required
+            />
+          </div>
 
-                <!-- Área de Atuação -->
-                <div class="form-group">
-                    <label for="area">Área de Especialização:</label>
-                    <input type="text" id="area" name="area" placeholder="Ex: Tecnologia" required>
-                </div>
+          <!-- Área de Atuação -->
+          <div class="form-group">
+            <label for="area">Área de Especialização:</label>
+            <input
+              type="text"
+              id="area"
+              name="area"
+              placeholder="Ex: Tecnologia"
+              required
+            />
+          </div>
 
-                <!-- Formação -->
-                <div class="form-group">
-                    <label for="formacao">Formação:</label>
-                    <input type="text" id="formacao" name="formacao" placeholder="Ex: Doutorado em Ciência da Computação" required>
-                </div>
+          <!-- Formação -->
+          <div class="form-group">
+            <label for="formacao">Formação:</label>
+            <input
+              type="text"
+              id="formacao"
+              name="formacao"
+              placeholder="Ex: Doutorado em Ciência da Computação"
+              required
+            />
+          </div>
 
-                <!-- Experiência -->
-                <div class="form-group">
-                    <label for="experiencia">Experiência:</label>
-                    <input type="text" id="experiencia" name="experiencia" placeholder="Ex: 10 anos de experiência" required>
-                </div>
+          <!-- Experiência -->
+          <div class="form-group">
+            <label for="experiencia">Experiência:</label>
+            <input
+              type="text"
+              id="experiencia"
+              name="experiencia"
+              placeholder="Ex: 10 anos de experiência"
+              required
+            />
+          </div>
 
-                <!-- Bio -->
-                <div class="form-group">
-                    <label for="bio">Bio:</label>
-                    <textarea id="bio" name="bio" rows="3" placeholder="Digite uma breve biografia do professor"></textarea>
-                </div>
+          <!-- Bio -->
+          <div class="form-group">
+            <label for="bio">Bio:</label>
+            <textarea
+              id="bio"
+              name="bio"
+              rows="3"
+              placeholder="Digite uma breve biografia do professor"
+            ></textarea>
+          </div>
 
-                <hr class="divider">
+          <hr class="divider" />
 
-                <!-- Informações de Contato -->
-                <h3>Informações de Contato</h3>
+          <!-- Informações de Contato -->
+          <h3>Informações de Contato</h3>
 
-                <!-- Email -->
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Ex: professor@example.com" required>
-                </div>
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Ex: professor@example.com"
+              required
+            />
+          </div>
 
-                <!-- Telefone -->
-                <div class="form-group">
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" placeholder="Ex: (11) 1234-5678" required>
-                </div>
+          <!-- Telefone -->
+          <div class="form-group">
+            <label for="telefone">Telefone:</label>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              placeholder="Ex: (11) 1234-5678"
+              required
+            />
+          </div>
 
-                <!-- Horário de Atendimento -->
-                <div class="form-group">
-                    <label for="horario">Horário de Atendimento:</label>
-                    <input type="text" id="horario" name="horario" placeholder="Ex: Segunda a Sexta, das 9h às 17h" required>
-                </div>
+          <!-- Horário de Atendimento -->
+          <div class="form-group">
+            <label for="horario">Horário de Atendimento:</label>
+            <input
+              type="text"
+              id="horario"
+              name="horario"
+              placeholder="Ex: Segunda a Sexta, das 9h às 17h"
+              required
+            />
+          </div>
 
-                <!-- Botão -->
-                <button type="submit" class="submit-btn">Cadastrar Professor</button>
-            </form>
-        </div>
+          <!-- Botão -->
+          <button type="submit" class="submit-btn">Cadastrar Professor</button>
+        </form>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
